@@ -1,1 +1,0 @@
-/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/lci.dir/interpreter.c.o CMakeFiles/lci.dir/lexer.c.o CMakeFiles/lci.dir/main.c.o CMakeFiles/lci.dir/parser.c.o CMakeFiles/lci.dir/tokenizer.c.o CMakeFiles/lci.dir/unicode.c.o CMakeFiles/lci.dir/error.c.o CMakeFiles/lci.dir/binding.c.o CMakeFiles/lci.dir/inet.c.o  -o lci  -lm -lncurses -lreadline 
