@@ -1,0 +1,2 @@
+/Users/tbcdigital/Developer/lci-future/lci/CMakeFiles/docs.dir
+/Users/tbcdigital/Developer/lci-future/lci/CMakeFiles/lci.dir
