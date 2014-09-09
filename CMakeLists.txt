@@ -44,11 +44,11 @@ SET(SRCS
   inet.c
 )
 
-add_executable(lci ${SRCS} ${HDRS})
+add_executable(zoe ${SRCS} ${HDRS})
 target_link_libraries(zoe m ncurses readline)
 #add_subdirectory(test)
 install(
-  TARGETS lci
+  TARGETS zoe
   RUNTIME DESTINATION bin
 )
 
