@@ -1,5 +1,7 @@
+#include <stdio.h>
 #include "binding.h"
 #include "inet.h"  /* for sockets */
+#include "unacceptable.h"
 
 ValueObject *getArg(struct scopeobject *scope, char *name)
 {
@@ -7,6 +9,20 @@ ValueObject *getArg(struct scopeobject *scope, char *name)
 	ValueObject *val = getScopeValue(scope, scope, id);
 	deleteIdentifierNode(id);
 	return val;
+}
+
+
+ReturnObject *isunacceptableWrapper(struct scopeobject *scope)
+{
+        ValueObject *arg1 = getArg(scope, "i");
+        int i = getInteger(arg1);
+
+        // you can do whatever here
+        int z = unacceptable_basis(i);
+
+        //ValueObject *ret = createIntegerValueObject(i);
+        ValueObject *ret = createIntegerValueObject(z);
+        return createReturnObject(RT_RETURN, ret);
 }
 
 ReturnObject *iopenWrapper(struct scopeobject *scope)
@@ -224,6 +240,7 @@ ReturnObject *randWrapper(struct scopeobject *scope)
 
 void loadLibrary(ScopeObject *scope, IdentifierNode *target)
 {
+
 	char *name = NULL;
 	int status;
 	ScopeObject *lib = NULL;
@@ -315,13 +332,29 @@ void loadLibrary(ScopeObject *scope, IdentifierNode *target)
 
 		if (!updateScopeValue(scope, scope, id, val)) goto loadLibraryAbort;
 		deleteIdentifierNode(id);
-	}
+   } else if (!strcmp(name, "MYLIB")) {  // CHANGED
+   	    lib = createScopeObject(scope);
+        if (!lib) goto loadLibraryAbort;
+
+        loadBinding(lib, "ISUNACCEPTABLE", "i", &isunacceptableWrapper); // CHANGED
+
+        id = createIdentifierNode(IT_DIRECT, (void *)copyString("MYLIB"), NULL, NULL, 0); // CHANGED
+        if (!id) goto loadLibraryAbort;
+
+        if (!createScopeValue(scope, scope, id)) goto loadLibraryAbort;
+
+        val = createArrayValueObject(lib);
+        if (!val) goto loadLibraryAbort;
+        lib = NULL;
+
+        if (!updateScopeValue(scope, scope, id, val)) goto loadLibraryAbort;
+        deleteIdentifierNode(id);
+}
 
 	if (name) free(name);
 	return;
 
 loadLibraryAbort: /* In case something goes wrong... */
-
 	/* Clean up any allocated structures */
 	if (name) free(name);
 	if (lib) deleteScopeObject(lib);

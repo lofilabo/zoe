@@ -30,6 +30,7 @@ SET(HDRS
   error.h
   binding.h
   inet.h
+  unacceptable.h
 )
 
 SET(SRCS
@@ -42,6 +43,7 @@ SET(SRCS
   error.c
   binding.c
   inet.c
+  unacceptable.c
 )
 
 add_executable(zoe ${SRCS} ${HDRS})
