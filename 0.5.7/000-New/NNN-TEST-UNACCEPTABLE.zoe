@@ -1,0 +1,84 @@
+oh look ! 
+
+
+	^.^{
+
+	ALL OF THEM are triggered here!
+
+	Developed via ../unacceptable/unacceptable01.zoe
+	Might still be there!
+	Just to let you know....
+
+
+	^.^ SPACE ... and NOSPACE... are OK.  But no SPACE after ...
+	^.^ You can put --- pencil --- at the beginning of the operation to show feedback, or leave it out.
+	^.^ The feedback will be in zoejamie.txt
+
+	ISUNACCEPTABLEZZZ3 now changed to zoePassString1
+	>>OLD Name-----------------------> NEW name
+
+
+	}^.^
+
+
+	  CAN HAS MYLIB?
+	  CAN HAS STDIO?
+		^.^	think about this:   ..MYLIB --arrMember--> ISUNACCEPTABLE1 <-zF-( "New Text Passed" )-zF-<
+		^.^	think about this:   ..MYLIB --arrMember--> ISUNACCEPTABLE1 <-[[[   "New Text Passed" ]]]
+		^.^	think about this:   ..MYLIB --noBaby-->    ISUNACCEPTABLE1 <--[   "New Text Passed" ]--<
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLE1 zIntoF "New Text Passed" zoe_call_now
+		^.^     end-of thinking
+
+
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLE1 <--[ "New Text Passed" ]--<
+		^.^	pencil " "
+		^.^  	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLE1 <--[ "New Text Passed" ]--<
+		  	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLE2 <--[ "New Text Passed" ]--<
+		^.^  	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLE3 <--[ "New Text Passed" ]--<
+		^.^  	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLE4 <--[ "New Text Passed" ]--<
+		^.^  	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZ <--[ "New Text Passed" ]--<
+
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZZ1 <--[ 111 zAnd 122 ]--<
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZZ2 <--[ 211 zAnd 222 ]--<
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZZ3 <--[ 311 zAnd 322 ]--<
+
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZZZbase <--[ 31 zAnd 32 zAnd 33 ]--<
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZZZ1 <--[ 41 zAnd 42 zAnd 43 ]--<
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZZZ2 <--[ 51 zAnd 52 zAnd 53 ]--<
+		^.^	pencil I wish_to_call MYLIB --toBaby--> ISUNACCEPTABLEZZZ2 <--[ 41 zAnd 42 zAnd 43 ]--<
+
+		I define vuwar1 = ""
+		I define vuwar2 = ""
+		I define vuwar3 = ""
+
+		vuwar1 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1...
+			<--[ "id1,data1;id2,data2;id3,data3;"...
+			zAnd ";"...
+			zAnd 1 ...
+			]--<
+
+		vuwar2 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+			<--[ "id1,data1;id2,data2;id3,data3;" ...
+			zAnd ";" ...
+			zAnd 0 ...
+			]--<
+
+		^.^ pencil vuwar1 "<----->" uwar2
+		pencil vuwar1
+		pencil vuwar2
+
+
+
+
+		^.^{
+		uwar3 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+			<--[ vuwar2...
+			zAnd ";" ...
+			zAnd 1 ...
+			]--<
+
+		pencil uwar3
+		}^.^
+
+
+I see !

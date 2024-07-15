@@ -1,0 +1,13 @@
+seeing Segmentation fault error ?
+
+Make sure that the file you are referring to is in
+the SAME DIRECTORY as the EXECUTION.
+
+For Instance....
+
+if you see it because of 
+
+html50.txt
+
+thn, make sure that there is a copy of html50.txt
+in the very directory from which you launch ./zoe

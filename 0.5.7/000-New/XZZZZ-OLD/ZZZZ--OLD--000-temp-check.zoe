@@ -1,0 +1,36 @@
+oh look !
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "007	007-function01.zoe"
+
+^.^ 	007	007-function01.zoe
+ 
+
+	function I myFunction zIntoF arriving_value
+		pencil arriving_value
+	end_of_function
+
+
+	function I myFunctionTwo zIntoF arriving_value zAnd second_value zAnd third_value
+
+		pencil arriving_value
+		pencil toysoldiers "3 Values" ":->" arriving_value "; " second_value "; " third_value zoe_call_now
+
+	zoe_return_from_function "I Came Back"
+	end_of_function
+
+	pencil "F U N C T I O N  ! ! ! ! "
+	pencil "F U N C T I O N  ! ! ! ! "
+	pencil "F U N C T I O N  ! ! ! ! "
+
+	I define retVal  -of-> zoe_string
+
+ 	I wish_to_call myFunction zIntoF 1  zoe_call_now
+^.^     Instruction    Name of func    Instruction   Val Instruction
+	I wish_to_call myFunction zIntoF "765" zoe_call_now
+	I wish_to_call myFunction zIntoF "blubble" zoe_call_now
+	retVal <-=- I wish_to_call myFunctionTwo zIntoF 44.4 zAnd 333 zAnd "Jamie!" zoe_call_now
+
+	pencil toysoldiers "returned vale" ":->" retVal zoe_call_now
+
+I see !

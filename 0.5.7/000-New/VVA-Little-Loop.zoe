@@ -1,0 +1,27 @@
+oh look ! 
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "010	010-loop.zoe"
+
+^.^ 	010	010-loop.zoe
+
+
+	I define i = 0
+	I define j = 0
+
+		zoe_loop_begin loopy 
+			pencil i
+
+			zoe_same i {.} 4
+				zoe_match?
+					zoe_pass
+						zoe_exit
+					zoe_fail
+						i <-=- z+ i {.} 1
+						
+			pencil "----ABOUT-TO-LOOP---------------"
+
+			^.^ i <-=- z+ i {.} 1
+		zoe_oh_I_see
+		zoe_loop_end loopy
+I see !

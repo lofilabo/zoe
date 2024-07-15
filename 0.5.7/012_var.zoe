@@ -1,0 +1,11 @@
+oh look ! 
+
+	I define var1 = 234
+	I define var2 = 5.67
+	I define var3 = ".  There! And There Again!!"
+	var1 becomes var1
+	var2 becomes var2
+	var3 becomes var3
+	scribble var1 var2 var3
+
+I see !

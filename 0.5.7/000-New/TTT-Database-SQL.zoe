@@ -1,0 +1,120 @@
+^.^{
+
+Does this not work?
+Do you care about database access?
+If NOT, comment or delete it (or separate into its own file!).
+
+
+If you DO cate, make sure this:
+
+	1. SQLite is installed.
+
+		sudo apt install sqlite3
+		sudo apt-get install libsqlite3-dev
+
+	2. Test basics:
+
+		./zdb_check
+
+}^.^
+
+
+oh look ! 
+
+^.^{
+ASSUME that we have a method of 'making' the SQL instruction.
+
+All that we are doing here is collecting the data.
+
+The datat will be returned - through zoeSQL, inside MYLIB, which 
+is in the file unacceptable.c
+
+At the BOTTOM of this file, is a longer description of how this works.
+
+can you see a message of results on screen?
+This is from zdb_basement.
+Our pencil is not recieving anything :(
+This is why the 'returned message' is written to zdb_output_data.txt
+}^.^
+
+	CAN HAS MYLIB?
+	^.^ 
+	^.^ pencil "this is from background.  Please check >> zdb_output_data.txt  << for the actual results"
+	^.^ pencil "in future...  please looks at execvp  ( ./zdb_basement  ,argv1  ) in unacceptable.c, look up '//fork()'"
+	pencil ""
+	pencil "Results:"
+	pencil "(start with watching the operations take place.)"
+
+	^.^ Select some of these tests!
+	^.^ pencil toysoldiers>--[   "Results being Returned: " I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable" ]--<   ]--<
+
+	^.^ AVAILABLE ACTONS.
+	^.^ Switch them on and off according to your wishes :)
+	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable" ]--<
+	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1" ]--<
+	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1 or id=2" ]--<
+	pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id<>1 and id<>2" ]--<
+
+	^.^ this pencile prints the Reurn vales from the C part
+	^.^ ^^^^^^^^^^^^^^This took place in the 'background', but is printed on return ('pencil I wish_to_call MYLIB --toBa.....')"
+
+	^.^ THE RESULTS are NOT retuend to us.
+	^.^ They are put into zdb_output_data.txt
+	^.^ Let's look at them:
+
+	pencil "We just watched the data being collected WITHIN the database."
+	pencil "Now, let's see what data has been returned to us (in: zdb_output_data.txt)"
+	CAN HAS STDIO?
+	I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "zdb_output_data.txt" zAnd "r" ]--<
+	I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
+	I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 1024 ]--<
+	pencil contents
+
+
+
+^.^{
+
+More Notes about 'what happens' when this function is called.
+
+	SHORT ver.
+
+
+	**Data is PASSED TO zdb_basement in the function call.
+
+	**Data is RETURNED FROM zdb_basement by being WRITTEN in a TEXT FILE.
+
+		The 'request' is a chunk
+		of SQL, transferred like this (inside zdb_check)(later, to be in Your program!):
+		static char *argv[]={"./zdb_basement","SELECT * from testtable;"}
+		                      ^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^ 
+			   Let's execute This program  This is the SQL to Pass to zdb_basement
+
+		IT DOES NOT ACCEPT RETURN OF ANYTHING.*<--{
+		                 |
+		                 |
+	   _______________       |          _______________
+	 -|WHERE-YOU-ARE  |--request-to-->--| zdb_basement |
+	 | ---------------                  ---------------
+	 |        |                           |
+	 |        ^                           |
+	 |        |                           |
+	 |         ----<--STORAGE-----<-----<-
+	 |           [zdb_output_data.txt]
+	 |         storage is in text file -- NOT PASSED BACK BY RETURN.
+	 |         *<--{ because the instruction which carries out getting-data.
+	 |         does not Deal With 'returning' the results, we WRITE THE
+	 |         RESULTS to a TEXT FILE (  )
+	 |
+	 |
+	 |_______________________this is the 'test' program.  We expect this task to
+		                 be carried out by the 'new' programme.
+
+
+	Can't repeat this enough - there is NO WAY to RETURN from execv.  So we store the data in a text file.
+
+
+}^.^
+
+
+
+I see !

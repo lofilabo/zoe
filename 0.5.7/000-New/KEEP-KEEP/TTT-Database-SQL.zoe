@@ -1,0 +1,42 @@
+^.^{
+
+Does this not work?
+Do you care about database access?
+If NOT, comment or delete it (or separate into its own file!).
+
+
+If you DO cate, make sure this:
+
+	1. SQLite is installed.
+
+		sudo apt install sqlite3
+		sudo apt-get install libsqlite3-dev
+
+	2. Test basics:
+
+		./zdb_check
+
+}^.^
+
+
+oh look ! 
+
+^.^{
+can you see a message of results on screen?
+This is from zdb_basement.
+Our pencil is not recieving anything :(
+This is why the 'returned message' is written to zdb_output_data.txt
+}^.^
+
+	CAN HAS MYLIB?
+	^.^ 
+	^.^ pencil "this is from background.  Please check >> zdb_output_data.txt  << for the actual results"
+	^.^ pencil "in future...  please looks at execvp  ( ./zdb_basement  ,argv1  ) in unacceptable.c, look up '//fork()'"
+	pencil I wish_to_call MYLIB --arrMember--> zoeSQL zIntoF "SELECT * from testtable where id=1 or id=2" zoe_call_now
+	^.^ this pencile prints the Reurn vales from the C part
+	
+
+
+
+I see !
+

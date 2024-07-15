@@ -1,0 +1,246 @@
+HTTP/1.1 200 OK:3:) Server: httpd.zoe/0.1 (zoe):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)
+
+<html>
+
+
+<head>
+
+<meta http-equiv="content-type" content="" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+
+
+<style>
+
+
+    body{
+        font-family: 'Oswald', sans-serif;
+        /* font-family: 'Share Tech Mono', monospace;*/
+        /*font-family: 'Abel', sans-serif;*/
+        /*font-family: 'Exo 2', sans-serif;*/
+        font-size:1.4em;
+    }
+
+    p{
+        /*font-family: Arial, Helvetica, sans-serif;*/
+        font-family: 'Share Tech Mono', monospace;
+
+    }
+    a{
+        /*font-family: Arial, Helvetica, sans-serif;*/
+        font-family: 'Abel', monospace;
+
+    }
+
+    .halfw{
+        width:45%;
+    }
+
+    .cyanb{
+        padding: 0px;
+        border-width: 1px;
+        border-style: dashed;
+        border-color: cyan;        
+    }
+
+    .redb{
+        padding: 0px;
+        border-width: 1px;
+        border-style: dashed;
+        border-color: red;        
+    }
+
+    .blueb{
+        padding: 0px;
+        border-width: 1px;
+        border-style: dashed;
+        border-color: blue;        
+    }
+
+    .greenb{
+        padding: 0px;
+        border-width: 1px;
+        border-style: dashed;
+        border-color: green;        
+    }
+
+    .photodiv{
+        width:100%;
+        border-style: solid;
+        border-width: 1px 0px 1px 0px;
+        border-color: #cccccc;
+        padding:40px 0px 40px 0px;
+        text-align: center;
+    }
+
+    .capsule-review p{
+        /*font-family: 'Pacifico', cursive;*/
+        font-family: 'Abel', cursive;
+        background-color: #000000;
+        color:#00ff00;
+        padding:20px 20px 20px 20px;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    #container{
+        width: 90%;
+        margin: 10px auto;
+        background-color: #fff;
+        color: #333;
+        border: 1px solid gray;
+        line-height: 130%;
+    }
+    
+    #top{
+        padding: 2em;
+        background-color: #5572a1;
+        color: #96b3e0;
+        border-bottom: 1px solid gray;
+    }
+    
+    #top h1{
+        padding: 0;
+        margin: 0;
+    }
+    
+    #leftnav{
+        float: left;
+        width: 160px;
+        margin: 0;
+        padding: 1em;
+    }
+    
+    #rightnav{
+        float: right;
+        width: 160px;
+        margin: 0;
+        padding: 1em;
+        max-width: 6em;
+    }
+    
+    #content{
+        margin-left: 200px;
+        border-left: 1px solid gray;
+        margin-right: 200px;
+        border-right: 1px solid gray;
+        padding: 1em;
+        
+    }
+    
+    #footer{
+        clear: both;
+        margin: 0;
+        padding: .5em;
+        color: #333;
+        background-color: #5572a1;
+        border-top: 1px solid gray;
+    }
+    
+    #leftnav p, #rightnav p {
+        margin: 0 0 1em 0;
+    }
+    
+    #content h2 {
+        margin: 0 0 .5em 0;
+    }
+
+</style>
+
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+    <div id="container">
+
+        <div id="top">
+            <h1>Zoe Header</h1>
+	    <h5>This Copy is in /000-New , i.e, maybe the SAME directory as the program.</h5>
+        </div>
+
+        <div id="leftnav">
+            <p>
+
+                    <hr/>
+                    
+                    <h6>Will this Update?</h6>
+                    <h5> :{positionList} </h5>
+                    <h4>Why, Doctor, Yes it Will!</h2>
+                                 
+                    <hr/>
+                
+                    :3:)
+
+                
+            </p>
+        </div>
+
+        <div id="rightnav">
+            <p>
+                     <a href = '/link/zoe/'>zoe</a> says 'oh!'
+            </p>
+        </div>
+
+        <div id="content">
+            <h2>Subheading</h2>
+            <p>
+                    <img src=https://www.1010.or.jp/map/wp-content/uploads/2015/03/naminoyu-top-250x170.jpg>
+                    <br/> 
+                
+                    Var positionList:<br/> :{positionList}
+                
+                    <br/>
+                
+                    
+            </p>
+        </div>
+
+        <div id="footer">
+            
+                <form 
+                    action=datainput 
+                    method=get
+                >
+                    <h5>
+                    <label for=data1>
+                        Data 01 &nbsp; 
+                    </label>
+                    <input type=text id=data1 name=data1 value=:{positionList}>
+                    <input type=submit value=Submit>
+                    </h5>
+                </form>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+oh look ! ^.^ as usual, not needed in this long set of tests. If it has its own home, uncomment
+
+CAN HAS MYLIB?
+CAN HAS STDIO?
+
+	I define survivingData = ""
+	I define allDataTaken = ""
+	I define separator = ""
+	I define Follow = 0
+
+	survivingData <-=- "CHUNK-ONE#######BLOB-TWO~~~~~~~BLOB-THREE;"
+
+^.^ start loop here
+
+		
+		separator <-=- "#######"
+
+	  	allDataTaken <-=- I wish_to_call MYLIB --toBaby--> zoePassStringMore ...
+		<--[ survivingData ...
+		zAnd separator ...
+		zAnd 1 ...
+		]--<
+		
+		^.^ pencil toysoldiers>--[ "starting data : " survivingData ]--<
+
+	  	survivingData <-=- I wish_to_call MYLIB --toBaby--> zoePassStringMore ...
+		<--[ survivingData ...
+		zAnd separator ...
+		zAnd 0 ...
+		]--<
+
+	  	allDataTaken <-=- I wish_to_call MYLIB --toBaby--> zoePassStringMore ...
+		<--[ allDataTaken ...
+		zAnd separator ...
+		zAnd 0 ...
+		]--<
+
+		pencil toysoldiers>--[ "'taken' item  : " survivingData ]--<
+
+		pencil toysoldiers>--[ "surviving data: " allDataTaken ]--<
+
+
+
+^.^ end loop here
+I see !   ^.^ as usual, not needed in this long set of tests. If it has its own home, uncomment
+
+
+
+

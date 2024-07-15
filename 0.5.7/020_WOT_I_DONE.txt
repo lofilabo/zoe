@@ -1,0 +1,31 @@
+WOT I DONE.txt
+
+General walkthrough on making a library call.
+
+i.	made header file unacceptable.h
+ii.	made program file unacceptable.c
+iii. modified CMakeLists.txt to include the files in the targets.
+
+iv. made a function prototype in unacceptable.h, like this:
+                int unacceptable_basis(int);
+
+v.	implemented the function in unacceptable.c, like this:
+                int unacceptable_basis(int j){
+                	j++;
+                	printf ("Unacceptable!\n");
+                	return j;
+                }
+vi.	made sure that this line:
+				#include "unacceptable.h"
+	was present in unacceptable.c.  This is to make sure that the .h file is included to wrap up all of the <stdio.h> functions.
+
+vii. made sure that this line:
+				 #include "unacceptable.h" 
+	was present in binding.c
+	IMPORTANT NOTE: bindings.c needs to be able to see the function prototypes for unacceptable_basis.
+	BUT: Directly including unacceptable.c will cause an //ld: 1 duplicate symbol// error.
+	SO: Put function prototypes and library invocations in the .h header file, and #include that header file
+	in the binding.c AND unacceptable.c file.
+
+viii.added the function call to the library-invoking function in binding.c, like so:
+	 int z = unacceptable_basis(4);

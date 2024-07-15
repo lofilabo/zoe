@@ -1,0 +1,53 @@
+1. Compile
+
+	cmake .
+
+	make
+
+1.2 Final compile task - MOVE the compiled zoe to 
+
+	/usr/local/bin/
+
+	the command is:
+
+	make install
+
+1.3 Delete an Unwanted File
+	**You Will See A Fail Message**
+	As follows:
+
+	"CMake Error: The current CMakeCache.txt directory 
+	/home/richard/(etc etc) join Strings together/CMakeCache.txt 
+	is different than the directory /home/etc etc where CMakeCache.txt 
+	was created. This may result in binaries being created in the 
+	wrong place. If you are not sure, reedit the CMakeCache.txt"
+
+	(this causes problems during Compiletion)
+
+	DO NOT WORRY!
+	DO NOT PANIC!
+
+	Delete this file:
+
+	CMakeCache.txt
+
+	by doing: rm CMakeCache.txt
+
+1.4 Segmentation fault (core dumped)
+
+Are you trying to access a text file from another directory???
+If you are executing ./zoe, and your program (maybe ./000-New/WW3-Web.zoe)
+is in a 'lower' directory, MAKE SURE that there is a copy of the file
+in ./zoe.
+
+This problem will go away when your program is installed :)
+
+2.1 Running
+
+	Move Command Line to THIS directory, and execute:
+
+	./zoe ./011.zoe 
+
+	to 'prove' that you are in the right place.
+
+

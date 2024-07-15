@@ -1,0 +1,13 @@
+NOTE for using gcc / cmake on Debian.
+
+#gcc and cmake is not enough to install. Do this too:
+sudo apt-get update && sudo apt-get install build-essential
+
+#install ncurses library:
+apt-get install ncurses-dev
+
+#readline library does not seem to be installed on Debian.
+#try this:
+apt-get install libreadline6-dev
+#or maybe this:
+apt-get install libreadline-gplv2-dev

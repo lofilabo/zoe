@@ -1,0 +1,39 @@
+oh look ! 
+
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+	
+	I define uwar771 = ""
+	I define uwar772 = ""
+	I define uwar773 = ""
+
+	uwar771 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1...
+	<--[ "id1,data1;id2,data2;id3,data3;"...
+	zAnd ";"...
+	zAnd 1 ...
+	]--<
+
+	uwar772 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+	<--[ "id1,data1;id2,data2;id3,data3;" ...
+	zAnd ";" ...
+	zAnd 0 ...
+	]--<
+
+	pencil uwar771 "<----->" uwar772
+	pencil uwar771
+	pencil uwar772
+
+	^.^{
+	uwar773 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+	<--[ uwar772...
+	zAnd ";" ...
+	zAnd 1 ...
+	]--<
+
+	pencil uwar773
+	}^.^
+
+
+
+I see !
+

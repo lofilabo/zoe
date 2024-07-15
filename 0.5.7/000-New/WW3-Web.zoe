@@ -1,0 +1,91 @@
+oh look !
+
+	pencil "Point your Browser at this:"
+	pencil "127.0.0.1:13332"
+
+	CAN HAS STDIO?
+	CAN HAS SOCKS?
+	CAN HAS STRING?
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13332 ]--<
+
+	I define zuwar2 = ""
+	I define s = 0
+    I define positionList = ""
+
+	I define textContent10 = ""
+	I define textContent20 = ""
+	I define textContent30 = ""
+	I define textContent40 = ""
+
+	I define textContent35 = ""
+    I define textContent36 = ""
+
+    I define textContent99 = ""
+
+    pencil "You are Here now"
+
+	zoe_loop_begin loop
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1024 ]--<
+
+		I define slotIn = cmd
+		
+		zuwar2 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ slotIn zAnd "H" zAnd 1 ]--<
+		positionList <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ zuwar2 zAnd "/" zAnd 0 ]--<
+
+        pencil positionList
+
+		I define reply = ""
+        ^.^{
+        textContent10 <-=- "HTTP/1.1 200 OK:3:) Server: httpd.zoe/0.1 (zoe):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)"
+        textContent20 <-=- "<html><body><h1>Current Call</h1><img src=https://www.1010.or.jp/map/wp-content/uploads/2015/03/naminoyu-top-250x170.jpg><br/> "
+        textContent30 <-=- "Var positionList: :{positionList}"
+        textContent35 <-=- "<a href = zoe/link>zoe</a> says 'oh!'"
+
+        ^.^ method: get / ???post
+        textContent36 <-=- "<hr/><form action=datainput method=get><label for=data1>Data 01 &nbsp; </label><input type=text id=data1 name=data1 value=herriot><input type=submit value=Submit></form><hr/>"
+
+        textContent40 <-=- ":3:)</body></html>"
+        }^.^
+
+	^.^ CAN HAS STDIO?
+	I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html50.txt" zAnd "r" ]--<
+	I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
+	I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 40024 ]--<
+
+    ^.^ let's keep this dump for a while.  Dont't have to show.
+    ^.^ pencil contents
+
+
+        ^.^{
+        I define textContent99 = toysoldiers>--[ textContent10 ...
+            textContent20 {.} ...
+            textContent30 ...
+            textContent35 ...
+            textContent36 ...
+            textContent40 ...
+         ]--<	^.^ SPACE NEEDED BEFORE  ]--< because of ...
+
+        textContent99 <-=- "HTTP/1.1 200 OK:3:) Server: httpd.zoe/0.1 (zoe):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)<html><body><h1>Current Call</h1><img src=https://www.1010.or.jp/map/wp-content/uploads/2015/03/naminoyu-top-250x170.jpg><br/> :{positionList}:3:)</body></html>"
+        reply <-=- textContent99
+        
+        }^.^
+        
+        reply <-=- contents
+		^.^ This is not our work - only the translation to zoe.
+		I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+       	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+		s <-=- z+ s {.} 1
+
+	zoe_loop_end loop
+
+
+pencil "END OF FILE"
+I see !

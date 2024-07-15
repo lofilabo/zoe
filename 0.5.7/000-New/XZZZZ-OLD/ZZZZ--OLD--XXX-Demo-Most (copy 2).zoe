@@ -1,0 +1,1289 @@
+^.^ when I open, you will see this first.
+
+^.^ Run With:
+^.^ ./zoe ./000-New/XXX-summary-002-999.zoe
+^.^ from the ABOVE directory!!
+
+
+oh look !
+
+^.^---------------------------------------------------------------------------------------------------
+^.^	001	001.zoe
+^.^oh look !
+
+  pencil "........................................................"
+  pencil "001	001.zoe"
+  CAN HAS STDIO?
+  pencil "but Doctor..."
+^.^I see !
+
+^.^---------------------------------------------------------------------------------------------------
+
+^.^ 	002	002_var.zoe
+^.^oh look ! 
+
+	pencil "........................................................"
+	pencil "001	001.zoe"
+	I define var1 = 234
+	I define var2 = 5.67
+	I define var3 = ".  There! And There Again!!"
+	var1 <-=- var1
+	var2 <-=- var2
+	var3 <-=- var3
+	pencil var1 var2 var3
+
+^.^I see !
+
+^.^---------------------------------------------------------------------------------------------------
+
+^.^ 	003 	003-numbers.zoe
+^.^oh look ! 
+
+  pencil "........................................................"
+  pencil "003 	003-numbers.zoe"
+  CAN HAS STDIO?
+
+	^.^ a note
+
+	^.^{
+		another note!
+		on many lines!!
+	}^.^
+
+	I define my_num1 = 3
+	^.^ pencil my_num1
+
+	I define my_num2 = 7.7
+	^.^ pencil my_num2
+
+	I define my_num = "hello"
+	^.^ pencil my_num 
+
+	I define  VAR_A = 5
+	I define  VAR_B = 3
+	I define  VAR_C = 0
+
+	VAR_C <-=- z+ VAR_A zoe_do_maths_with VAR_B
+	pencil VAR_C
+
+	VAR_C <-=- z+ my_num1 zoe_do_maths_with my_num2
+	pencil VAR_C
+
+
+
+^.^I see !
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "004	004-plus_minus_etc.zoe"
+
+^.^ 	004	004-plus_minus_etc.zoe
+^.^oh look ! 
+
+	I define my_numZx = 0
+	I define my_num1x = 4
+	I define my_num2x = 2
+
+	my_numZx <-=- z+ my_num1x zoe_do_maths_with my_num2x
+	pencil my_numZx
+
+	my_numZx <-=- z- my_num1x zoe_do_maths_with my_num2x
+	pencil my_numZx
+
+	my_numZx <-=- z* my_num1x zoe_do_maths_with my_num2x
+	pencil my_numZx
+
+	my_numZx <-=- z/ my_num1x zoe_do_maths_with my_num2x
+	pencil my_numZx
+
+^.^I see !
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "005	005-modulo-etc.zoe"
+
+^.^ 	005	005-modulo-etc.zoe
+^.^oh look ! 
+	I define my_num1a = 10
+	I define my_num2a = 4
+	I define my_numZa = 0
+
+
+	
+	my_numZa <-=- z% my_num1a zoe_do_maths_with my_num2a
+	pencil my_numZa
+
+	my_numZa <-=- z> my_num1a zoe_do_maths_with my_num2a
+	pencil my_numZa
+
+	my_numZa <-=- z< my_num1a zoe_do_maths_with my_num2a
+	pencil my_numZa
+
+
+^.^I see !
+
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "006	006-boolean.zoe"
+
+^.^ 	006	006-boolean.zoe
+^.^oh look ! 
+
+I define my_bool1 -of-> zoe_boolean
+I define my_bool2 -of-> zoe_boolean
+I define my_boolZ -of-> zoe_boolean
+
+my_bool1 <-=- "True"
+my_bool2 <-=- "False"
+pencil my_bool1
+
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "007	007-function01.zoe"
+
+^.^ 	007	007-function01.zoe
+^.^oh look ! 
+
+	function I myFunction zIntoF arriving_value
+		pencil arriving_value
+	end_of_function
+
+
+	function I myFunctionTwo zIntoF arriving_value zoe_and_this second_value zoe_and_this third_value
+
+		pencil arriving_value
+		pencil toysoldiers "3 Values" ":->" arriving_value "; " second_value "; " third_value zoe_call_now
+
+	zoe_return_from_function "I Came Back"
+	end_of_function
+
+	pencil "F U N C T I O N  ! ! ! ! "
+	pencil "F U N C T I O N  ! ! ! ! "
+	pencil "F U N C T I O N  ! ! ! ! "
+
+	I define retVal  -of-> zoe_string
+
+ 	I wish_to_call myFunction zIntoF 1  zoe_call_now
+^.^     Instruction    Name of func    Instruction   Val Instruction
+	I wish_to_call myFunction zIntoF "765" zoe_call_now
+	I wish_to_call myFunction zIntoF "blubble" zoe_call_now
+	retVal <-=- I wish_to_call myFunctionTwo zIntoF 44.4 zoe_and_this 333 zoe_and_this "Jamie!" zoe_call_now
+
+	pencil toysoldiers "returned vale" ":->" retVal zoe_call_now
+
+^.^I see !
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "008	008-function02--NOT-YET-TOUCHED.zoe"
+
+^.^ 	008	008-function02--NOT-YET-TOUCHED.zoe
+^.^oh look ! 
+
+pencil "To Be Completed.  No Problems Inside!!"
+
+^.^I see !
+
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "009	009-if_then_else.zoe"
+
+^.^ 	009	009-if_then_else.zoe
+^.^oh look ! 
+
+pencil "let's start...."
+
+I define var11 = "letterUP"
+I define var21 = "letterUP"
+I define var31 = "letterDOWN"
+I define var41 = "letterMIDDLE"
+I define var51 = "letterOUTTHERE"
+
+pencil "------------------------------------------------------"
+pencil "Step 1:"
+^.^ This should pass
+zoe_same var11 zoe_do_maths_with var21
+zoe_match?
+	zoe_pass
+		pencil "You Passed!"
+	zoe_fail
+		pencil "You Failed!"
+zoe_oh_I_see
+
+
+pencil "------------------------------------------------------"
+pencil "Step 2:"
+^.^ This should fail
+zoe_same var11 zoe_do_maths_with var21
+zoe_match?
+	zoe_pass
+		pencil "You Passed!"
+	zoe_fail
+		pencil "You Failed!"
+zoe_oh_I_see
+
+
+pencil "------------------------------------------------------"
+^.^ This can pass (3 times!) and fail once.
+pencil "Step 3:"
+zoe_same var11 zoe_do_maths_with var21
+zoe_match?
+	zoe_pass
+		pencil "You Passed Stage 1"
+
+	zoe_else zoe_same var1 zoe_do_maths_with var4
+		pencil "You Passed Stage 2"
+
+	zoe_else zoe_same var1 zoe_do_maths_with var5
+		pencil "You Passed Stage 3"
+
+	zoe_fail
+		pencil "You Failed."
+zoe_oh_I_see
+
+
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "010	010-loop.zoe"
+
+^.^ 	010	010-loop.zoe
+^.^oh look ! 
+
+	I define trackingVar = 0
+	I define printingValue = 0
+		zoe_loop_begin loopy zoe_inthis zIntoF trackingVar zoe_until zoe_same trackingVar zoe_do_maths_with 3
+			pencil printingValue			
+			printingValue <-=- z+ trackingVar zoe_do_maths_with 1
+			^.^pencil "but Doctor..."
+		zoe_loop_end loopy
+
+	pencil "--------"
+
+	trackingVar <-=- 2
+		zoe_loop_begin loopy zoe_inthis zIntoF trackingVar zoe_until zoe_same trackingVar zoe_do_maths_with 7
+			pencil trackingVar	
+		zoe_loop_end loopy
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "011	011-loop2.zoe"
+
+^.^ 	011	011-loop2.zoe
+^.^oh look ! 
+
+pencil "There is nothing here yet. No Problems ^.^"
+
+^.^I see !
+
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "012-loop3.zoe"
+
+^.^ 	012-loop3.zoe
+^.^oh look ! 
+
+I define trackingVar4 = 0
+
+zoe_loop_begin loop_label
+	pencil trackingVar4
+	trackingVar4 <-=- z+ trackingVar4 zoe_do_maths_with 1
+
+	zoe_same trackingVar4 zoe_do_maths_with 7
+		zoe_match?
+		^.^ NEXT: Use BIGGROF: https://gist.github.com/sharmaeklavya2/8a0e2581baf969be0f64
+		zoe_pass
+		pencil "You exit!"
+		zoe_exit
+	zoe_oh_I_see
+
+zoe_loop_end loop_label
+
+
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil ".YOU ARE IN A LOOP NOW.  Do SOMETHING TO MOVE."
+	pencil "CTRL-C to stop, RTN to move on, enter something, then RTN to test"
+	pencil "013	013-flow-control.zoe"
+
+^.^ 	013	013-flow-control.zoe
+^.^oh look ! 
+
+	I define COLOR = ""
+	zoe_pleaseInput COLOR
+	COLOR, zoe_whichone?
+	    zoe_Isee "R"
+		pencil "RED FISH"
+		zoe_exit
+	    zoe_Isee "Y"
+		pencil "YELLOW FISH"
+		^.^ BTW Since there is no `GTFO` the next statements will also be tested
+	    zoe_Isee "G"
+	    zoe_Isee "grr"
+	    zoe_Isee "B"
+		pencil "FISH HAS A FLAVOR"
+		zoe_exit
+	    zoe_ohIsee
+	pencil "FISH IS TRANSPARENT OHNO WAT"
+	zoe_oh_I_see
+
+
+^.^I see !
+
+
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "014	014-array-for-today.zoe"
+
+^.^ 	014	014-array-for-today.zoe
+^.^oh look ! 
+
+^.^foo define var1 -of-> zoe_integer
+I define foo -of-> zoe_array
+
+foo define var1 = WIN
+foo define var2 = FAIL
+foo define var3 = -1
+foo define var4 = 2
+foo define var5 = -3.456
+foo define var6 = 4.21
+foo define var7 = "abc"
+
+^.^ VISIBLE SUM OF 0 AN foo'Z var1
+pencil z+ 0 zoe_do_maths_with foo --arrMember--> var1
+pencil z* 2 zoe_do_maths_with foo --arrMember--> var4
+pencil z/ 8.42 zoe_do_maths_with foo --arrMember--> var6
+
+^.^ VISIBLE foo'Z var7
+pencil foo --arrMember--> var3
+pencil foo --arrMember--> var4
+pencil foo --arrMember--> var5
+pencil foo --arrMember--> var6
+pencil foo --arrMember--> var7
+
+^.^I see !
+
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "015	015-array-more.zoe"
+
+^.^ 	015	015-array-more.zoe
+^.^oh look ! 
+
+  pencil "but Doctor..."
+
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "016	016-join-strings.zoe"
+
+^.^ 	016	016-join-strings.zoe
+^.^oh look ! 
+
+	I define VAR1 = "abc" 
+	I define VAR2 = "def"
+	I define VAR3 = toysoldiers VAR1 VAR2 zoe_do_maths_with VAR2 zoe_call_now	^.^ This is OK
+	I define VAR4 = toysoldiers VAR1 VAR2 zoe_call_now				^.^ So is this
+	I define VAR5 = toysoldiers VAR1 "<---->" VAR2 zoe_call_now				^.^ So is this
+ 
+	pencil VAR3
+	pencil VAR4
+	pencil VAR5
+
+
+^.^I see !
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "017	017-insert-string.zoe"
+
+^.^ 	017	017-insert-string.zoe
+^.^oh look ! 
+
+	I define var
+	I define anothervar
+
+	anothervar <-=- "FOUR"
+
+	var <-=- "Three, and then :{anothervar} ....and Five!"
+
+	pencil var
+
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil ".YOU ARE IN A LOOP NOW.  Do SOMETHING TO MOVE."
+	pencil "CTRL-C to stop, RTN to move on, enter something, then RTN to test"
+	pencil "018	018-COLLECT-INPUT.zoe"
+
+^.^ 	018	018-COLLECT-INPUT.zoe
+^.^oh look ! 
+
+	I define letter = ""
+	zoe_pleaseInput letter
+	letter, zoe_whichone?
+	    zoe_Isee "a"
+		pencil "You said a"
+		zoe_exit ^.^ Exit!! Now!!
+
+	    zoe_Isee "b"
+		pencil "You said b"
+		^.^ BTW Since there is no `zoe_exit` the next statements will also be tested
+		^.^ Do Not Exit!! Pass-through the rest!!
+
+		^.^ zoe_exit
+
+	    zoe_Isee "A"
+		pencil "You said A"
+		^.^ zoe_exit
+
+	    zoe_Isee "B"
+		pencil "You said B"
+		^.^ zoe_exit
+
+	    zoe_ohIsee
+		pencil "Oh! I see!!"
+
+	zoe_oh_I_see
+
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "019	019-Unused.zoe"
+
+^.^ 	019	019-Unused.zoe
+^.^oh look ! 
+
+^.^ Code Here..............
+
+^.^I see !
+
+^.^===================================================================================================
+^.^==========    B i g g e r   O n e s   =============================================================
+^.^===================================================================================================
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "301	301-TEST-C-FUNCTIONS.zoe"
+
+^.^ 	301	301-TEST-C-FUNCTIONS.zoe
+^.^oh look ! 
+
+
+	^.^{
+
+	ALL OF THEM are triggered here!
+
+	Developed via ../unacceptable/unacceptable01.zoe
+	Might still be there!
+	Just to let you know....
+
+	}^.^
+
+
+	  CAN HAS MYLIB?
+	  CAN HAS STDIO?
+			
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLE1 zIntoF "New Text Passed" zoe_call_now
+		^.^	pencil " "
+
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZZZ2 zIntoF 41 zoe_and_this 42 zoe_and_this 43 zoe_call_now
+
+		^.^  	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLE1 zIntoF "New Text Passed" zoe_call_now
+		^.^  	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLE2 zIntoF "New Text Passed" zoe_call_now
+		^.^  	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLE3 zIntoF "New Text Passed" zoe_call_now
+		^.^  	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLE4 zIntoF "New Text Passed" zoe_call_now
+		^.^  	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZ zIntoF "New Text Passed" zoe_call_now
+
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZZ1 zIntoF 111 zoe_and_this 122 zoe_call_now
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZZ2 zIntoF 211 zoe_and_this 222 zoe_call_now
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZZ3 zIntoF 311 zoe_and_this 322 zoe_call_now
+
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZZZbase zIntoF 31 zoe_and_this 32 zoe_and_this 33 zoe_call_now
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZZZ1 zIntoF 41 zoe_and_this 42 zoe_and_this 43 zoe_call_now
+		^.^	pencil I wish_to_call MYLIB --arrMember--> ISUNACCEPTABLEZZZ2 zIntoF 51 zoe_and_this 52 zoe_and_this 53 zoe_call_now
+
+		^.^ SPACE ... and NOSPACE... are OK.  But no SPACE after ...
+		^.^ You can put --- pencil --- at the beginning of the operation to show feedback, or leave it out.
+		^.^ The feedback will be in zoejamie.txt
+
+		^.^{
+		ISUNACCEPTABLEZZZ3 now changed to zoePassString1
+		>>OLD Name-----------------------> NEW name
+		}^.^
+
+		I define vuwar1 = ""
+		I define vuwar2 = ""
+		I define vuwar3 = ""
+
+		vuwar1 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1...
+			zIntoF "id1,data1;id2,data2;id3,data3;"...
+			zoe_and_this ";"...
+			zoe_and_this 1 ...
+			zoe_call_now
+
+		vuwar2 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+			zIntoF "id1,data1;id2,data2;id3,data3;" ...
+			zoe_and_this ";" ...
+			zoe_and_this 0 ...
+			zoe_call_now
+
+		^.^ pencil vuwar1 "<----->" uwar2
+		pencil vuwar1
+		pencil vuwar2
+
+		^.^{
+		uwar3 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+			zIntoF vuwar2...
+			zoe_and_this ";" ...
+			zoe_and_this 1 ...
+			zoe_call_now
+
+		pencil uwar3
+		}^.^
+
+
+^.^I see !
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "401	401-storeData_1.zoe"
+
+^.^ 	401	401-storeData_1.zoe
+^.^oh look ! 
+
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+	
+	I define uwar771 = ""
+	I define uwar772 = ""
+	I define uwar773 = ""
+
+	uwar771 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1...
+	zIntoF "id1,data1;id2,data2;id3,data3;"...
+	zoe_and_this ";"...
+	zoe_and_this 1 ...
+	zoe_call_now
+
+	uwar772 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+	zIntoF "id1,data1;id2,data2;id3,data3;" ...
+	zoe_and_this ";" ...
+	zoe_and_this 0 ...
+	zoe_call_now
+
+	^.^ pencil uwar771 "<----->" uwar772
+	pencil uwar771
+	pencil uwar772
+
+	^.^{
+	uwar773 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+	zIntoF uwar772...
+	zoe_and_this ";" ...
+	zoe_and_this 1 ...
+	zoe_call_now
+
+	pencil uwar773
+	}^.^
+
+
+
+^.^I see !
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "402	402-split-string-by-semicolon.zoe"
+
+^.^ 	402	402-split-string-by-semicolon.zoe
+^.^oh look ! 
+
+CAN HAS MYLIB?
+CAN HAS STDIO?
+
+^.^{
+ISUNACCEPTABLEZZZ3 now changed to zoePassString1
+}^.^
+
+	I define uwar351 = ""
+	I define uwar352 = ""
+	I define uwar353 = ""
+
+  	uwar351 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1...
+	zIntoF "id1,data1;id2,data2;id3,data3;"...
+	zoe_and_this ";"...
+	zoe_and_this 1 ...
+	zoe_call_now
+
+  	uwar352 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+	zIntoF "id1,data1;id2,data2;id3,data3;" ...
+	zoe_and_this ";" ...
+	zoe_and_this 0 ...
+	zoe_call_now
+
+	^.^ pencil uwar351 "<----->" uwar352
+	pencil uwar351
+	pencil uwar352
+	
+	^.^{
+  	uwar353 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+	zIntoF uwar352...
+	zoe_and_this ";" ...
+	zoe_and_this 1 ...
+	zoe_call_now
+
+	pencil uwar353
+	}^.^
+
+^.^I see !
+
+
+
+
+
+
+
+
+
+
+^.^{
+
+F I L E   T H I N G S	
+
+NOTES FOR NEXT 2 Parts...........
+
+"r"
+"w"
+"a"
+"r+"
+"w+"
+"a+"
+
+
+r: opens a text file in reading mode.
+w: opens or creates a text file in writing mode.
+a: opens a text file in append mode.
+r+: opens a text file in both reading and writing mode. ...
+w+: opens a text file in both reading and writing mode. ...
+a+: opens a text file in both reading and appending mode.
+
+}^.^
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "701	701-Text-Write-Basic.zoe"
+
+^.^ 	701	701-Text-Write-Basic.zoe
+^.^oh look ! 
+
+	CAN HAS STDIO?
+	I define writeFile = I wish_to_call STDIO --arrMember--> OPEN zIntoF "read.txt" zoe_and_this "w" zoe_call_now
+	I wish_to_call STDIO --arrMember--> SCRIBBEL zIntoF writeFile zoe_and_this "wibble bibble waggle naggle." zoe_call_now
+	I wish_to_call STDIO --arrMember--> CLOSE zIntoF writeFile zoe_call_now
+
+^.^I see !
+
+
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "702	702-Text-Read-Basic.zoe"
+
+^.^ 	702	702-Text-Read-Basic.zoe
+^.^oh look ! 
+
+	CAN HAS STDIO?
+	I define readFile = I wish_to_call STDIO --arrMember--> OPEN zIntoF "read.txt" zoe_and_this "r" zoe_call_now
+	I wish_to_call STDIO --arrMember--> DIAF zIntoF readFile zoe_call_now 
+	I define contents = I wish_to_call STDIO --arrMember-->  LUK zIntoF readFile zoe_and_this 1024 zoe_call_now
+	pencil contents
+
+^.^I see !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^.^{
+WEB
+web
+Web
+
+Version 1.
+Tiny.
+Beginning.
+
+}^.^
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "601	601-web-simple.zoe"
+
+^.^ 	601	601-web-simple.zoe
+^.^oh look ! 
+
+	CAN HAS STDIO?
+	CAN HAS SOCKS?
+	CAN HAS STRING?
+	CAN HAS MYLIB?
+
+^.^Fuction Goes Here
+
+
+^.^ Commented-out for now:
+^.^ Uncomment to run.  Rememeber that the whole page will 'loop' and 'stop'
+^.^ HERE.  Not harmful, but let's step over for now.
+^.^{BEGIN COMMENT
+
+	WE ARE STEPPING OVER HERE - Better one is lower down (602-web-simple.zoe)
+	WE ARE STEPPING OVER HERE - Better one is lower down (602-web-simple.zoe)
+	WE ARE STEPPING OVER HERE - Better one is lower down (602-web-simple.zoe)
+	WE ARE STEPPING OVER HERE - Better one is lower down (602-web-simple.zoe)
+
+	pencil "Web 1!"
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --arrMember--> BIND zIntoF "127.0.0.1" zoe_and_this 13337 zoe_call_now
+
+
+	zoe_loop_begin loop
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --arrMember--> LISTN zIntoF sock zoe_call_now
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --arrMember-->  GET zIntoF sock zoe_and_this conn zoe_and_this 1024 zoe_call_now
+
+		^.^  I define slotIn = "niggly naggly noo noo noo"
+		  I define slotIn = cmd
+		^.^  I HAS A slotIn ITZ I IZ parse YR cmd MKAY BTW <<<<we must prepare this next.  Use ___parse___ function
+		
+		pencil slotIn
+
+		I define reply = ""
+		
+		reply <-=- "HTTP/1.1 200 OK:3:) Server: httpd.lol/0.1 (lci):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)hello there :{slotIn}:3:)"
+		I wish_to_call SOCKS --arrMember--> PUT zIntoF sock zoe_and_this conn zoe_and_this reply zoe_call_now
+        	I wish_to_call SOCKS --arrMember--> CLOSE zIntoF conn zoe_call_now
+
+	zoe_loop_end loop
+END COMMENT}^.^
+^.^I see !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^.^  B I G    G A P   H E R E
+
+
+^.^  START OF 701	LL3-Loop--Very-Important.zoe
+
+
+
+
+
+
+
+
+
+
+
+^.^{
+
+Separated-data
+better
+
+loop through:
+u;v;w;x;y;z
+
+into:
+u;v;w;x;y;z
+v;w;x;y;z
+w;x;y;z
+x;y;z
+y;z
+z
+
+
+Version 0.9.
+
+NOTE TO SELF:
+This is '701', but it is before '601'.  Why?
+BECAUSE, the web application is an infinite-loop (;;)
+It Needs to be at the End of this!
+
+
+}^.^
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "701	LL3-Loop--Very-Important.zoe"
+
+^.^ 	701	LL3-Loop--Very-Important.zoe
+^.^oh look ! 
+
+	pencil ""
+	pencil "LOOP AND CHOP LOOP AND CHOP LOOP AND CHOP "
+	pencil "LOOP AND CHOP LOOP AND CHOP LOOP AND CHOP "
+	pencil "LOOP AND CHOP LOOP AND CHOP LOOP AND CHOP "
+	pencil "LOOP AND CHOP LOOP AND CHOP LOOP AND CHOP "
+
+
+
+^.^ Code Here..............
+
+^.^I see !
+
+
+
+^.^{
+CHOP UP A STRING
+
+*  based on 'my' version
+   --simple decleretion of loop
+   --specific exit
+
+Q: WHY is this important?
+
+A: End of a search!
+   Loop-through a string separated by ; and divide into
+   separate strings, using zoePassString1.
+
+	zoePassString1 acceps 3 arguments:
+	1. String to be Processed
+	2. Dividing character
+	3: Option:
+		0 -> return the section AFTER the divider in (2)
+		1>-> return the section BEFORE the divider in (2)
+
+	Because our ORIGINAL data will be mutilated, we make a COPY
+	( survivingDataCurrent ) and throw-away the content AFTER the diveder.
+
+	Then, we work on the original, and throw away the content BEFORE 
+	the divider (which makes it good for looping again!
+	
+	SURVIVE		TAKEN
+Start	a;b;c;d; 
+Take 1	b;c;d; 		a
+Take 1	c;d;		b
+Take 1	d;		c
+Take 1			d
+End
+
+The 'End' is based on the observation that the SURVIVE list is now "".
+
+The actual, operation code starts from here!
+Not even very much of it ^^
+}^.^
+
+
+^.^ oh look ! ^.^ as usual, not needed in this long set of tests. If it has its own home, uncomment
+
+CAN HAS MYLIB?
+CAN HAS STDIO?
+
+	I define survivingData = ""
+	I define allDataTaken = ""
+	I define Follow = 0
+
+	survivingData <-=- "item1;item2;item3;item4;"
+
+^.^ start loop here
+	zoe_loop_begin loopy
+
+		
+	  	allDataTaken <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+		zIntoF survivingData ...
+		zoe_and_this ";" ...
+		zoe_and_this 1 ...
+		zoe_call_now
+		
+		pencil toysoldiers "starting data : " survivingData zoe_call_now
+
+	  	survivingData <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 ...
+		zIntoF survivingData ...
+		zoe_and_this ";" ...
+		zoe_and_this 0 ...
+		zoe_call_now
+
+		pencil toysoldiers "'taken' item  : " allDataTaken zoe_call_now
+		pencil toysoldiers "surviving data: " survivingData zoe_call_now
+
+		^.^{ 
+			Important!
+			the rationale begind the EXIT here
+			is: 'when we are looking at "" (zero-string), then Exit'
+			IF survivingData EQUALS no-string, we have finished and we can exit.
+		}^.^
+		zoe_same survivingData zoe_do_maths_with ""
+			zoe_match?
+				zoe_pass
+					zoe_exit
+				zoe_fail
+					Follow <-=- 0 ^.^ Nothing doing - allowing us to demo role of 'zoe_else'
+		pencil "----ABOUT-TO-LOOP---------------"
+
+
+^.^ end loop here
+	zoe_oh_I_see
+	zoe_loop_end loopy
+^.^ I see !   ^.^ as usual, not needed in this long set of tests. If it has its own home, uncomment
+
+
+
+
+
+
+^.^  a n o t h e r    B I G    G A P   H E R E
+
+
+^.^  SQL_END   End of the SQL function.  Cut this out if it is causing problems.
+
+
+^.^  END OF 701	LL3-Loop--Very-Important.zoe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^.^  START OF 602	602-web-simple.zoe
+
+
+^.^{
+WEB
+web
+Web
+
+Version 2.
+
+}^.^
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil ""
+	pencil "602	602-web-simple.zoe"
+
+^.^ 	602	602-web-simple.zoe
+^.^oh look ! 
+
+	pencil ""
+	pencil "WEB WEB WEB WEB WEB WEB WEB "
+	pencil "WEB WEB WEB WEB WEB WEB WEB "
+	pencil "WEB WEB WEB WEB WEB WEB WEB "
+	pencil "Web Server v.2 Now Running"
+
+	pencil "We are in an Endless Loop now."
+	pencil "CTRL-C to stop"
+	pencil "Keep at the End of this file."
+
+	pencil ""
+	pencil "Point your Browser at this:"
+	pencil "127.0.0.1:13337"
+
+
+	CAN HAS STDIO?
+	CAN HAS SOCKS?
+	CAN HAS STRING?
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --arrMember--> BIND zIntoF "127.0.0.1" zoe_and_this 13337 zoe_call_now
+
+
+	^.^{
+		THE REASON FOR CAPTURING TWICE 
+
+		When a 'REQUEST' is made, there are 2 'calls', one after another.
+		If we store the 'last request' re recieve, we will miss important 
+		one ith this information:
+
+			GET /prongle/grragh/8888888/hgfhgfhgf/%5E%5E%5E%5E HTTP/1.1
+			Host: 127.0.0.1:13337
+			Connection: keep-alive
+			Cache-Control: max-age=0
+			......
+		
+		If we store only the 'last' response we get, this will be overwritten.
+
+		We get 2 and not 1 responses.
+
+		i.
+		Uncomment this:
+		^.^ pencil slotIn
+		to see them.
+
+		ii.
+		Store both of them in different vars.
+		these are:
+		zuwarM  and
+		zuwarO
+
+		We then look into zuwarM to get what we want:
+		GET /prongle/grragh/8888888/hgfhgfhgf/%5E%5E%5E%5E HTTP/1.1
+		beween GET and HTTP....
+
+		iii.
+		Important to remember:
+		Our ONE request results in TWO replies,
+		of which the second will override the first if we 'just' roll the loop
+		to pick up 'the reply'
+	}^.^
+
+
+	I define trackingVarX = ""
+	I define printingValueX = ""
+	I define zuwar1 = ""
+	I define zuwar2 = ""
+	I define zuwar3 = ""
+	I define zuwar7 = ""
+	I define zuwarM = ""
+	I define zuwarO = ""
+	I define s = 0
+
+
+	zoe_loop_begin loop
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --arrMember--> LISTN zIntoF sock zoe_call_now
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --arrMember-->  GET zIntoF sock zoe_and_this conn zoe_and_this 1024 zoe_call_now
+
+		^.^  I define slotIn = "niggly naggly noo noo noo"
+
+		I define slotIn = cmd
+		
+		^.^  I HAS A slotIn ITZ I IZ parse YR cmd MKAY BTW <<<<we must prepare this next.  Use ___parse___ function
+		
+		^.^ do not show everything if you don't want to.
+		^.^ This shows on the Server Monitor - not the Browser!
+		^.^ pencil slotIn 
+		
+		^.^ use this to see the string which is being looked at.
+		^.^ pencil slotIn
+
+		^.^ Experiment - try to cut off the first bit of the string     zuwar7 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 zIntoF slotIn zoe_and_this " " zoe_and_this 0 zoe_call_now
+		zuwar2 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 zIntoF slotIn zoe_and_this "H" zoe_and_this 1 zoe_call_now
+		^.^	DIVIDE THE STRING.  >>>> HTTP/1.1 <<<		Here we are using 'H' from HTTP/1.1 
+		^.^	Can we do better?
+		^.^	SPLITTING THE STRING 
+		^.^	THIS BIT.
+		^.^	D O    N O T   L E A V E    T H I S   A L O N E
+		
+		^.^ use this to see the string which is being looked at.
+		^.^ pencil zuwar2
+
+
+		zuwar3 <-=- I wish_to_call MYLIB --arrMember--> zoePassString1 zIntoF zuwar2 zoe_and_this "/" zoe_and_this 0 zoe_call_now
+
+
+			^.^ pencil slotIn  ^.^ EACH reply from the server.
+			^.^ pencil zuwar3
+			^.^ pencil s
+		
+			^.^ Let's keep track of the 'reply' we are 'inside'
+			^.^ s=0 -- first one	( zuwarM )
+			^.^ s=1 -- second one	( zuwarO )
+
+
+			^.^ if s = 1, we are in the 1st output.  
+			zoe_same s zoe_do_maths_with 0
+			zoe_match?
+				zoe_pass
+					^.^ pencil "You Passed Stage 1"
+					zuwarM <-=- zuwar3
+					pencil zuwarM
+			zoe_oh_I_see
+
+			^.^ if s = 1, we are in the 2nd output.  Today, we require nothing from here.
+			zoe_same s zoe_do_maths_with 1
+			zoe_match?
+				zoe_pass
+					^.^ pencil "You Passed Stage 1"
+					zuwarO <-=- zuwar3
+					^.^ pencil zuwarO ^.^we need
+			zoe_oh_I_see
+
+			^.^ if s = 1, we can 'reset'
+			zoe_same s zoe_do_maths_with 1
+			zoe_match?
+				zoe_pass
+					s <-=- 0
+			zoe_oh_I_see
+		
+
+		I define reply = ""
+		^.^ OUTPUT 1 - to Browser
+		^.^ Reply Type 1
+		^.^ (we can look at everything)		
+		^.^ reply <-=- "HTTP/1.1 200 OK:3:) Server: httpd.lol/0.1 (lci):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)hello there :{slotIn}:3:)"
+
+		^.^ OUTPUT 2 - to Browser
+		^.^ Reply type 2.
+		^.^ what we trim from the above reciebed signals.
+		^.^ (we see ONLY the web item name)
+
+		^.^ without HTML
+		^.^ reply <-=- "HTTP/1.1 200 OK:3:) Server: httpd.zoe/0.1 (lci):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)Current Call--> :{zuwar3}:3:)"
+
+		^.^ with HTML
+		reply <-=- "HTTP/1.1 200 OK:3:) Server: httpd.zoe/0.1 (lci):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)<html><body><h1>Current Call</h1><img src=https://www.1010.or.jp/map/wp-content/uploads/2015/03/naminoyu-top-250x170.jpg><br/> :{zuwar3}:3:)</body></html>"
+
+		^.^ This is not our work - only the translation to zoe.
+
+		I wish_to_call SOCKS --arrMember--> PUT zIntoF sock zoe_and_this conn zoe_and_this reply zoe_call_now
+        	I wish_to_call SOCKS --arrMember--> CLOSE zIntoF conn zoe_call_now
+
+		s <-=- z+ s zoe_do_maths_with 1
+
+	zoe_loop_end loop
+
+^.^I see !
+
+^.^END OF 602	602-web-simple.zoe
+
+
+
+
+
+
+
+
+
+pencil "END OF FILE"
+I see !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^.^ a Gap!!
+^.^ Notes at the end!!
+
+
+
+
+
+
+
+
+
+
+^.^ PATTERN - copy and paste this to begin a new entry on this file.
+
+
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "00x	name.zoe"
+
+^.^ 	00x	name.zoe
+^.^oh look ! 
+
+^.^ Code Here..............
+
+^.^I see !
+
+
+
+
+
+
+
+
+
+
+

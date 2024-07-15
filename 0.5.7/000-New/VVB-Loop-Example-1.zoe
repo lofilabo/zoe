@@ -1,0 +1,175 @@
+^.^{
+This is a side-copy of section 701 in XXX-Demo-Most.zoe
+
+}^.^
+
+oh look ! 
+^.^  START OF 701	LL3-Loop--Very-Important.zoe
+^.^{
+
+Separated-data
+better
+
+loop through:
+u;v;w;x;y;z
+
+into:
+u;v;w;x;y;z
+v;w;x;y;z
+w;x;y;z
+x;y;z
+y;z
+z
+
+
+Version 0.9.
+
+NOTE TO SELF:
+This is '701', but it is before '601'.  Why?
+BECAUSE, the web application is an infinite-loop (;;)
+It Needs to be at the End of this!
+
+
+}^.^
+^.^---------------------------------------------------------------------------------------------------
+	pencil "........................................................"
+	pencil "701	LL3-Loop--Very-Important.zoe"
+
+^.^ 	701	LL3-Loop--Very-Important.zoe
+
+
+	pencil ""
+	pencil "LOOP AND CHOP LOOP AND CHOP LOOP AND CHOP "
+	pencil "LOOP AND CHOP LOOP AND CHOP LOOP AND CHOP "
+	pencil ""
+
+^.^ Code Here..............
+
+^.^I see !
+
+
+
+^.^{
+CHOP UP A STRING
+
+*  based on 'my' version
+   --simple decleretion of loop
+   --specific exit
+
+Q: WHY is this important?
+
+A: End of a search!
+   Loop-through a string separated by ; and divide into
+   separate strings, using zoePassString1.
+
+	zoePassString1 acceps 3 arguments:
+	1. String to be Processed
+	2. Dividing character
+	3: Option:
+		0 -> return the section AFTER the divider in (2)
+		1>-> return the section BEFORE the divider in (2)
+
+	Because our ORIGINAL data will be mutilated, we make a COPY
+	( survivingDataCurrent ) and throw-away the content AFTER the diveder.
+
+	Then, we work on the original, and throw away the content BEFORE 
+	the divider (which makes it good for looping again!
+	
+	SURVIVE		TAKEN
+Start	a;b;c;d; 
+Take 1	b;c;d; 		a
+Take 1	c;d;		b
+Take 1	d;		c
+Take 1			d
+End
+
+The 'End' is based on the observation that the SURVIVE list is now "".
+
+The actual, operation code starts from here!
+Not even very much of it ^^
+}^.^
+
+
+^.^ oh look ! ^.^ as usual, not needed in this long set of tests. If it has its own home, uncomment
+
+CAN HAS MYLIB?
+CAN HAS STDIO?
+
+	I define survivingData = ""
+	I define allDataTaken = ""
+	I define Follow = 0
+
+	survivingData <-=- "item1;item2;item3;"
+
+^.^ start loop here
+	zoe_loop_begin loopy
+
+		^.^{
+			Reminder:
+			in the data: aaaa;1111
+			0 is 1111
+			1 is aaaa
+			Think if '1' meaning 'Most important', 'most valuable', 'Numbah#1' etc...
+			Think of '0' as 'everything else'
+
+			And the important this....
+			COUNT DOWN INTO LAUNCH!
+			do 1, then 0 !
+		}^.^
+
+	  	allDataTaken <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+		<--[ survivingData ...
+		zAnd ";" ...
+		zAnd 1 ...
+		]--<
+		
+		pencil toysoldiers>--[ "starting data : " survivingData ]--<
+
+		^.^ <--[ is the new name for zoe_pass_this: a list of things being passed into a function.
+
+	  	survivingData <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+		<--[ survivingData ...
+		zAnd ";" ...
+		zAnd 0 ...
+		]--<
+
+		pencil toysoldiers>--[ "'taken' item  : " allDataTaken ]--<
+		pencil toysoldiers>--[ "surviving data: " survivingData ]--<
+
+		^.^{ 
+			Important!
+			the rationale begind the EXIT here
+			is: 'when we are looking at "" (zero-string), then Exit'
+			IF survivingData EQUALS no-string, we have finished and we can exit.
+		}^.^
+		zoe_same survivingData {.} ""
+			zoe_match?
+				zoe_pass
+					zoe_exit
+				zoe_fail
+					Follow <-=- 0 ^.^ Nothing doing - allowing us to demo role of 'zoe_else'
+		pencil "----ABOUT-TO-LOOP---------------"
+
+
+^.^ end loop here
+	zoe_oh_I_see
+	zoe_loop_end loopy
+I see !   ^.^ as usual, not needed in this long set of tests. If it has its own home, uncomment
+
+
+
+
+
+
+^.^  a n o t h e r    B I G    G A P   H E R E
+
+
+^.^  SQL_END   End of the SQL function.  Cut this out if it is causing problems.
+
+
+^.^  END OF 701	LL3-Loop--Very-Important.zoe
+
+
+
+
+

@@ -1,0 +1,201 @@
+SHORT ver.
+
+Please bear in mind:
+-- zdb_basement is INDEPENDENT from Zoe (which is why it is not called Jamie.)
+-- if you are disinterested in SQL things, Ignore all of this.
+
+-- two programmes are of interest to us at this stage;
+--- zdb_basement
+--- zdb_check
+
+zdb_check is the 'test' programme; zdb_basement is the 'actual' programme.
+
+--- to see how it works in zoe, take a look at:
+	unacceptable.c
+--- and search for 'SQL Job Marker'
+--- The use of Sqlite is *very simplistic* here.  You can do better.
+
+Why not think of it this way:
+i.   C gives us the mechanism Call an executable, using execvp
+ii.  The C abilty is is wrapped in a tiny proramme, which is given sh access.
+iii. We use this call zdb_basement, passing in a bit of SQL as a string.
+iv.  Because execvp will not return anything useful, to return data, we write it to zdb_data.db
+iv.  There is a diagramme of this at (4)
+
+1.
+Compile zdb_basement.c.
+
+gcc zdb_basement.c -o zdb_basement -lsqlite3
+---------------This is important!---^^^^^^^^
+
+( Make the code turn into executable  --  COMPILE )
+
+
+2.
+( Now, EXECUTE and Test just-this-bit)
+./zdb_basement "SELECT * from testtable where id=2;"
+
+PROBLEMS HERE?
+Check that Sqlite is installed!!
+
+	sudo apt install sqlite3
+	sudo apt-get install libsqlite3-dev
+	** line 2 is important!
+
+3.
+Compile the tiny 'check' programme.
+This calls zdb_basement, and verifies that you have Sqlite running on your machine.
+
+This 'uses' the same method that the 'main' programme uses, to test that the main programme
+will be able to do it ;)
+
+gcc zdb_check.c -o zdb_check
+
+-------- TO TEST:
+-------- Compile zdb_check.c :
+-------- gcc zdb_check.c -o zdb_check
+-------- and run:
+-------- ./zdb_check
+
+( Make the code turn into executable  --  COMPILE )
+
+4.
+( Now, EXECUTE and TEST EVERYTHING)
+./zdb_check
+
+
+
+
+**Requests / Data is PASSED TO zdb_basement in the function call.
+
+**Data is RETURNED FROM zdb_basement by being WRITTEN in a TEXT FILE.
+
+        The 'request' is a chunk
+        of SQL, transferred like this (inside zdb_check)(later, to be in Your program!):
+        static char *argv[]={"./zdb_basement","SELECT * from testtable;"}
+                              ^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^ 
+	           Let's execute This program  This is the SQL to Pass to zdb_basement
+
+        IT DOES NOT ACCEPT RETURN OF ANYTHING.*<--{
+                    |
+                    |
+   __________       |          _______________
+ -|zdb_check |--request-to-->--| zdb_basement |
+ | ----------                  ---------------
+ |        |                           |
+ |        ^                           |
+ |        |                           |
+ |         ----<--STORAGE-----<-----<-
+ |           [zdb_data.txt]
+ |         storage is in text file -- NOT PASSED BACK BY RETURN.
+ |         *<--{ because the instruction which carries out getting-data.
+ |         does not Deal With 'returning' the results, we WRITE THE
+ |         RESULTS to a TEXT FILE (  )
+ |
+ |
+ |_______________________this is the 'test' program.  We expect this task to
+                         be carried out by the 'new' programme.
+
+
+Can't repeat this enough - there is NO WAY to RETURN from execv.  So we store the data in a text file.
+
+
+
+******************************************************************************************
+AFTER HERE:
+THIS IS OLD.  SHOULD HAVE BEEN REPLACED.  THINK ABOUT DITCHING IT.
+******************************************************************************************
+
+
+
+what is this?
+
+A system with 2 programmes.
+
+0.
+
+IN THIS DIRECTORY, we have:
+
+zdb_basement + zdb_basement.c --- new SQL-handling programme on Sqlite
+
+zdb_check + zdb_check.c  --- little test programme to 'practice'
+
+notes-for-you....  This!!
+
+what-to-do.txt -- old text file.
+
+test.db  --- SQLite database file
+
+zoe_data.txt --- small text data, to work around the fact that 
+                 there is no Return is available from execv
+
+1.
+
+zdb_check.c
+
+The part that will be 'incorporated' into the Big programme.
+
+
+
+2.
+
+zdb_basement.c
+
+The part which will be 'independant', and 'called' by the first.
+
+THIS is the one which works with SQLinte,
+
+retrurnd results
+
+which are of the:
+
+1:one;2:two;3:three; variety.
+
+NOTE THAT:
+*It does SQL stuff by-itself
+
+
+
+1b.
+
+i. Compiling
+
+gcc zdb_check.c -o zdb_check
+(compile zdb_check.c to zdb_check, which is executable)
+
+ii/ Executing
+
+./zdb_check
+
+This RUNS ./1 , and, in the future may be able to accept a returned result.
+
+
+
+2b.
+Running the 'idependent' programme:
+
+i. Compiling
+	gcc zdb_basement.c -o zdb_basement -lsqlite3
+
+ii. Executing
+	./zdb_basement "SELECT * from testtable where id <> 2"
+
+(the programme [./zdb_basement] accepts a string with SQL in it.
+
+The results are displayed on screen.
+
+
+STATE OF PLAY
+
+1. Does add new records.
+
+2. Will 'run' SQL to Extract, but execv will not return.
+
+WE ARE GETTING AROUND THIS BY:
+
+Writing the results into the file zoedata.txt
+
+THIS NEEDS TO BE EMBETTERED IN THE FUTURE....
+
+
+

@@ -1,0 +1,14 @@
+oh look !
+  CAN HAS STDIO?
+
+	I define VAR1 = "abc" 
+	I define VAR2 = "def"
+	I define VAR3 = toysoldiers>--[ VAR1 VAR2 {.} VAR2 ]--<	^.^ This is OK
+	I define VAR4 = toysoldiers>--[ VAR1 VAR2 ]--<		^.^ So is this
+	I define VAR5 = toysoldiers>--[ VAR1 "<---->" VAR2 ]--<	^.^ So is this
+ 
+	pencil VAR3
+	pencil VAR4
+	pencil VAR5
+
+I see !
