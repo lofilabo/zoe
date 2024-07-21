@@ -1,0 +1,26 @@
+oh look ! 
+
+^.^foo define var1 -of-> zoe_integer
+I define foo -of-> zoe_array
+
+foo define var1 = WIN
+foo define var2 = FAIL
+foo define var3 = -1
+foo define var4 = 2
+foo define var5 = -3.456
+foo define var6 = 4.21
+foo define var7 = "abc"
+
+^.^ VISIBLE SUM OF 0 AN foo'Z var1
+pencil z+ 0 {.} foo --toBaby--> var1
+pencil z* 2 {.} foo --toBaby--> var4
+pencil z/ 8.42 {.} foo --toBaby--> var6
+
+^.^ VISIBLE foo'Z var7
+pencil foo --toBaby--> var3
+pencil foo --toBaby--> var4
+pencil foo --toBaby--> var5
+pencil foo --toBaby--> var6
+pencil foo --toBaby--> var7
+
+I see !
