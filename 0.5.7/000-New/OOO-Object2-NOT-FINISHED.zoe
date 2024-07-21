@@ -1,0 +1,43 @@
+oh look !
+
+	I define burger -of-> zoe_array
+		burger define subburger1 = "doggie"
+		burger define subburger2 = "kittie"
+		burger define subburger3 = "mousey"
+
+	I define cheeze -of-> zoe_array
+		cheeze define subcheeze = "KATT"
+
+	I define bukkit -of-> zoe_array
+	I define subbukkit -of-> zoe_array
+	I define burgerBUR -of-> zoe_array
+
+	bukkit define subbukkit = "BUKKKKIT"
+	bukkit define cheeze = "BUKKKKIT"
+
+	bukkit define burgerBUR zoe_derivedFrom burger 
+	^.^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Progress!!!!
+
+	^.^ Now, define a part of the sub-object
+	burgerBUR define subburger4 = "piggie"
+	burgerBUR define subburger5 = "niffle"
+
+	pencil "#burger ::"
+	pencil "  " burger --toBaby--> subburger1
+	pencil "  " burger --toBaby--> subburger2
+	pencil "  " burger --toBaby--> subburger3
+
+	pencil " "
+
+	pencil "#bukkit burgerBUR (derived) ::"
+	pencil "    " bukkit --toBaby--> burgerBUR --toBaby--> subburger1
+	pencil "    " bukkit --toBaby--> burgerBUR --toBaby--> subburger2
+	pencil "    " bukkit --toBaby--> burgerBUR --toBaby--> subburger3
+	pencil " "
+	pencil "    #burgerBUR own! ::"
+	pencil "      "                    burgerBUR --toBaby--> subburger4
+	pencil "      "                    burgerBUR --toBaby--> subburger5
+
+	pencil cheeze --toBaby--> subcheeze
+
+I see !

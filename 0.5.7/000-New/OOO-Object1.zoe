@@ -1,0 +1,53 @@
+oh look !
+	pencil ""
+	pencil "CLASS AND OBJECT CLASS AND OBJECT CLASS AND OBJECT  "
+	pencil "CLASS AND OBJECT CLASS AND OBJECT CLASS AND OBJECT  "
+	pencil "CLASS AND OBJECT CLASS AND OBJECT CLASS AND OBJECT  "
+	pencil "CLASS AND OBJECT CLASS AND OBJECT CLASS AND OBJECT  "
+
+	CAN HAS STDIO?
+
+	I define objRtn1 = ""
+	I define objRtn2 = ""
+	I define objRtn3 = ""
+	
+	pencil "Hold Our Breath and do not expect."
+
+	function I fun1 <--[ a
+		pencil "a"
+		zReturn "I Came Back: fun1 "
+	end_of_function
+
+	function I fun2 <--[ a
+		pencil "b" {.} a
+		zReturn "I Came Back: fun2 "
+
+	end_of_function
+
+	function I fun3 <--[ a zAnd b zAnd c
+		pencil "c" {.} a {.} b {.} c
+		zReturn "I Came Back: fun3 "
+
+	end_of_function
+
+	I define fooFun -of-> zoe_array
+		fooFun define var1 = fun1
+		fooFun define var2 = fun2
+		fooFun define var3 = fun3
+
+	objRtn1 <-=- I wish_to_call fooFun --toBaby--> var1 <--[ 1 ]--<
+	objRtn2 <-=- I wish_to_call fooFun --toBaby--> var2 <--[ 1 ]--<
+	objRtn3 <-=- I wish_to_call fooFun --toBaby--> var3 <--[ 1 zAnd 2.345 zAnd "xyz" ]--<
+
+	pencil objRtn1
+	pencil objRtn2
+	pencil objRtn3
+
+^.^{
+}^.^
+
+
+
+
+
+I see !

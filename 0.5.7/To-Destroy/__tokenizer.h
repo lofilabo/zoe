@@ -118,7 +118,7 @@ static const char *keywords[] = {
 	"",            		/* TT_IDENTIFIER */
 	"",            		/* TT_BOOLEAN */
 	"IT",          		/* TT_IT */		/* You Did This! 'IT' -> 	''   	---LATEST - > ''   */
-	"zoe_derivedFrom",  		/* TT_ITZLIEKA */	/* You Did This! 'ITZ LIEK A' ->'zoe_similar'   	---LATEST - > ''   */
+	"ITZ LIEK A",  		/* TT_ITZLIEKA */	/* You Did This! 'ITZ LIEK A' ->''   	---LATEST - > ''   */
 	"zoe_nill",        	/* TT_NOOB */		/* You Did This! 'NOOB' -> 	'zoe_nill'   	---LATEST - > ''   */
 	"zoe_integer",       	/* TT_NUMBR */		/* You Did This! 'NUMBR' -> 	'zoe_integer'  	---LATEST - > ''   */
 	"zoe_decimal",      	/* TT_NUMBAR */		/* You Did This! 'NUMBAR' -> 	'zoe_decimal'   ---LATEST - > ''  */
