@@ -1,0 +1,74 @@
+oh look !
+
+	I define myStringArray -of-> zoe_array
+
+	myStringArray define VAR17 = "OBJECT1"
+	myStringArray define VAR18 = "OBJECT2"
+
+	function myStringArray functionOwnNameREALLY <--[ incoming1 zAnd incoming2
+		pencil "Inside..."
+		pencil incoming1
+		pencil incoming2
+		I define myOutgoing = toysoldiers>--[ incoming1 ";" incoming2 ]--<	 
+		pencil myOutgoing
+
+		^.^ BOTH OF THESE WORK^^ Play with them :)
+		zReturn "Returning From Function myStringArray"
+		^.^ zReturn myStringArray --toBaby--> zSeriously incoming1
+		^.^ zReturn myOutgoing
+
+	end_of_function
+
+	I define myShortString = "VAR17"
+	^.^ I define myShortString = VAR17
+
+	I define retVal = ""
+	I define newVal = "newval"
+
+	^.^  Now, we'll invoke and instance of the Class (of-type zoe_array)
+	^.^  Our object is an array -- myStringArray (sentence)
+	^.^  The array already has 2 data components - VAR17 and VAR18 (nouns)
+	^.^  Let's add a function --  functionOwnNameREALLY (verb) 
+
+	retVal <-=- myStringArray wish_to_call functionOwnNameREALLY <--[ myShortString zAnd newVal ]--<
+
+	^.^ CALLING:     array-which-owns-func      within-array-function-name     values to go in to function
+	^.^{
+	TO REPEAT:
+	myStringArray          ::  The array (object) with the function Inside it
+	functionOwnNameREALLY  ::  The function (member) of the object.
+	<--[ ... zAnd ... ]--< ::  The things passing into the function
+
+	}^.^     
+
+	pencil "and Outside..."
+	pencil retVal	^.^ The message RETURNED FROM functionOwnNameREALLY
+	^.^ Use toBaby to obtain the value of VAR18
+	pencil myStringArray --toBaby--> VAR18
+
+	^.^ Start by looking at the value of VAR18.  This will change later.
+	pencil myStringArray --toBaby--> VAR17
+
+	^.^ Last step here - change the value of a part of the Array, and print.
+	^.^ Two 'local' ones
+	I define VAR86 = "Eighty-Six"
+	I define VAR87 = "Eighty-Seven"
+
+	^.^ One 'remote' one (inside myStringArray)
+	myStringArray define VAR88 = "Eighty-Eight"
+
+	^.^ CHANGE a remote var (VAR17) to the same value as 'local' VAR86
+	myStringArray --toBaby--> VAR17 <-=- VAR86
+
+	pencil VAR86
+	pencil VAR87
+	pencil myStringArray --toBaby--> VAR17
+	pencil myStringArray --toBaby--> VAR88
+
+	^.^{
+	End Note.
+	There is a lot going on here. Take your time. 
+	Copy and Practice.
+	}^.^
+
+I see !
