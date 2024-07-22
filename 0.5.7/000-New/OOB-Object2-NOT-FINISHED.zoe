@@ -23,7 +23,31 @@ oh look !
 	^.^
 	^.^ 1. we define 'bukkit' (above)
 	^.^ 2. we say 'within bukkit, define [burgerBUR], a derivative of [burger]
-
+	^.^
+	^.^ Think of it like this:
+	^.^
+	^.^ within bukkit, there is a Sub-Section, burgerBUR
+	^.^ this is a 'clone' of burger.
+	^.^
+	^.^ Or....
+	^.^ Think of it this way....
+	^.^ we 'start' with bukkit
+	^.^ we define a subclass of burger to be a 'member' of bukkit (called bucketBUR)
+	^.^ (just was we can do with a string or an integer)
+	^.^ 
+	^.^                        (below is the op.)          
+	^.^ bukkit define burgerBUR zoe_derivedFrom burger
+	^.^   ^               ^                        ^
+	^.^   ^               ^                        ^---the 'route' / 'parent' of burgerBUR
+	^.^   ^               ^
+	^.^   ^               ^
+	^.^   ^               ^----------------------------the name of the COPY OF burger,
+	^.^   ^                                            a MEMBER (slave?) of bukket
+	^.^   ^
+	^.^   ^
+	^.^   ^--------------------------------------------the class (zoe_array) which 'owns' burgerBUR
+	^.^                                                A.K.A the class we are 'working on' here. 
+	
 
 	^.^ Now, define a part of the sub-object
 	^.^ burgerBUR has its OWN components, which can be addressed as:
@@ -50,6 +74,7 @@ oh look !
 	pencil "      "                    burgerBUR --toBaby--> subburger4
 	pencil "      "                    burgerBUR --toBaby--> subburger5
 
+	pencil bukkit --toBaby--> cheeze
 	pencil cheeze --toBaby--> subcheeze
 
 I see !
