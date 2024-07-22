@@ -20,7 +20,11 @@ oh look !
 		zReturn "  >>Returning from Roissy"
 	end_of_function
 
-
+	function SirStephen Roissy2 <--[ incoming1 zAnd incoming2
+		pencil ">>Deeply Inside..."
+		pencil toysoldiers>--[ "  >>" incoming1 ": " incoming2 ]--<
+		zReturn "  >>Returning from Roissy"
+	end_of_function
 
 	^.^ OWNER    SLAVE/CHILD(O)         PARENT
 	SirStephen define O zoe_derivedFrom Rene
@@ -36,6 +40,9 @@ oh look !
 	passOver <-=- Rene wish_to_call Roissy <--[ "This Week" zAnd "Rene" ]--<
 	pencil passOver
 	
+	^.^ 1.1 Call the function from it's 'original' owner(SirStephen).
+	passOver <-=- SirStephen wish_to_call Roissy2 <--[ "Side Step" zAnd "...another" ]--<
+	pencil passOver
 
 	^.^ 2. Call the function which has 'been passed over' the funtion Roissy
 	^.^ NOTE that Roissy was *defined* as a function of Rene
