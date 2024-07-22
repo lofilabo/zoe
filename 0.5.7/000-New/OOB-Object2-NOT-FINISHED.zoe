@@ -17,8 +17,17 @@ oh look !
 
 	bukkit define burgerBUR zoe_derivedFrom burger 
 	^.^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Progress!!!!
+	^.^ THE MOST IMPORTANT LINE!
+	^.^ SHOWS HOW TO DERIVE / GIVE-BIRTH-TO A DAUGHTER-OBJECT
+	^.^ KEY HERE IS >>>>>> zoe_derivedFrom <<<<<<<<<
+	^.^
+	^.^ 1. we define 'bukkit' (above)
+	^.^ 2. we say 'within bukkit, define [burgerBUR], a derivative of [burger]
+
 
 	^.^ Now, define a part of the sub-object
+	^.^ burgerBUR has its OWN components, which can be addressed as:
+	^.^ burgerBUR --toBaby--> subburger4
 	burgerBUR define subburger4 = "piggie"
 	burgerBUR define subburger5 = "niffle"
 
@@ -29,6 +38,9 @@ oh look !
 
 	pencil " "
 
+	^.^ 
+	^.^ 
+	^.^ 
 	pencil "#bukkit burgerBUR (derived) ::"
 	pencil "    " bukkit --toBaby--> burgerBUR --toBaby--> subburger1
 	pencil "    " bukkit --toBaby--> burgerBUR --toBaby--> subburger2

@@ -1,0 +1,67 @@
+oh look !
+^.^{
+Better demo of FUCTION calling.
+No inheritance in this.
+}^.^
+
+
+	^.^ NOTE TO SELF: toysoldiers>--[ incoming1 ";" incoming2 ]--<
+
+	I define myStringArray -of-> zoe_array
+
+	^.^ These are object-level, and must be addressed with myStringArray --toBaby--> testValx
+	myStringArray define testVal1 = "OBJECT1"
+	myStringArray define testVal2 = "OBJECT2"
+
+	function myStringArray functionOwnNameREALLY <--[ incoming1 zAnd incoming2
+		pencil "Inside..."
+
+		pencil " "		
+		pencil "2.1.  Address object-level vars"
+		pencil myStringArray --toBaby--> testVal1
+		pencil myStringArray --toBaby--> testVal2
+
+		pencil " "		
+		pencil "2.2.  Address locale-level vars"
+		pencil incoming1
+		pencil incoming2
+
+		pencil " "		
+		pencil "2.3.  Things combined"
+		I define myOutgoing = toysoldiers>--[ incoming1 ";" incoming2 ]--<	 
+		pencil myOutgoing
+
+		^.^ Do things with the vars
+		^.^ BOTH OF THESE WORK^^ Play with them :)
+		pencil " "		
+		pencil "2.4.  And now, return with a value."
+		zReturn "Returning From Function myStringArray"
+		^.^ zReturn myStringArray --toBaby--> zSeriously incoming1
+		^.^ zReturn myOutgoing
+	end_of_function
+
+	^.^ I define myShortString = "VAR17"
+
+	^.^ I define newVal = "newval"
+	I define retVal = ""
+	I define inVal1 = "One"
+	I define inVal2 = "Two"
+
+	^.^Object-level Vars
+	pencil " "		
+	pencil "1.1.  Object-level vars."
+	pencil myStringArray --toBaby--> testVal1
+	pencil myStringArray --toBaby--> testVal2
+
+	^.^Local-level Vars
+	pencil " "		
+	pencil "1.2.  Locale-level vars."
+	pencil inVal1
+	pencil inVal2
+
+	retVal <-=- myStringArray wish_to_call functionOwnNameREALLY <--[ inVal1 zAnd inVal2 ]--<
+	pencil " "		
+	pencil "3.1.  Returned from call."
+	pencil retVal
+
+I see !
