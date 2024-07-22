@@ -1,0 +1,44 @@
+oh look !
+^.^ I chose becasue I wanted to
+^.^ make jokes about 'O' and 'Objets' (because I am a software engineer),
+^.^ But not 'Sir Stephen' and 'SS' (because I am not Susanne Grifin).
+^.^ and passOver. Andrea Dworkin. Nuff said.
+
+	I define Rene -of-> zoe_array
+	I define O -of-> zoe_array
+	I define SirStephen -of-> zoe_array
+
+	O define testVal1 = "Objet"
+	pencil O --toBaby--> testVal1
+
+
+	^.^ Rene is the Introducer/Parent of this function
+	^.^ Roissy is the Function Name
+	function Rene Roissy <--[ incoming1 zAnd incoming2
+		pencil ">>Deeply Inside..."
+		pencil toysoldiers>--[ "  >>" incoming1 ": " incoming2 ]--<
+		zReturn "  >>Returning from Roissy"
+	end_of_function
+
+	^.^ OWNER    SLAVE/CHILD(O)         PARENT
+	SirStephen define O zoe_derivedFrom Rene
+	^.^  COMPARE:
+	^.^  SirStephen --toBaby--> O wish_to_call    Roissy[] <- Function Call
+	^.^  SirStephen define      O zoe_derivedFrom Rene     <- Relationship def'n
+
+	pencil ">>Witness Passover"
+
+	I define passOver = ""
+
+	^.^ 1. Call the function from it's 'original' owner.
+	passOver <-=- Rene wish_to_call Roissy <--[ "This Week" zAnd "Rene" ]--<
+	pencil passOver
+
+	^.^ 2. Call the function which has 'been passed over' the funtion Roissy
+	^.^ NOTE that Roissy was *defined* as a function of Rene
+	^.^ but Equal Control is now held by SirStephen
+	passOver <-=- SirStephen --toBaby--> O wish_to_call Roissy <--[ "Next Week" zAnd "Sir Stephen" ]--<
+	pencil passOver
+
+
+I see !

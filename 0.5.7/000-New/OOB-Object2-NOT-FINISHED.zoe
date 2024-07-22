@@ -35,6 +35,7 @@ oh look !
 	^.^ we define a subclass of burger to be a 'member' of bukkit (called bucketBUR)
 	^.^ (just was we can do with a string or an integer)
 	^.^ 
+	^.^ OWNER        SLAVE/CHILD                PARENT
 	^.^                        (below is the op.)          
 	^.^ bukkit define burgerBUR zoe_derivedFrom burger
 	^.^   ^               ^                        ^
