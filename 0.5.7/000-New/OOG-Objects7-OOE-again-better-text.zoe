@@ -1,0 +1,30 @@
+oh look !
+
+	I define Array_1_1_father -of-> zoe_array
+	I define Array_1_2_baby -of-> zoe_array
+	I define Array_1_3_mother -of-> zoe_array
+
+	Array_1_2_baby define testVal1 = "Objet"
+	pencil Array_1_2_baby --toBaby--> testVal1
+
+	function Array_1_1_father Function_1_1 <--[ incoming1 zAnd incoming2
+		^.^ pencil ">>Now Inside Function"
+		pencil toysoldiers>--[ "===>" incoming1 ": " incoming2 ]--<
+		zReturn "=>Returning from Function_1_1"
+	end_of_function
+
+	Array_1_3_mother define Array_1_2_baby zoe_derivedFrom Array_1_1_father
+	^.^ "Array_1_3_mother has a baby, Array_1_2_baby, fathered by Array_1_1
+	^.^ The baby exists between its parent^.^
+
+	pencil "Look At retVal (inside route)"
+
+	I define retVal = ""
+
+	retVal <-=- Array_1_1_father wish_to_call Function_1_1 <--[ "[calling from] " zAnd "Array_1_1" ]--<
+	pencil retVal
+	
+	retVal <-=- Array_1_3_mother --toBaby--> Array_1_2_baby wish_to_call Function_1_1 <--[ "[calling from] " zAnd "Array_1_3" ]--<
+	pencil retVal
+
+I see !
