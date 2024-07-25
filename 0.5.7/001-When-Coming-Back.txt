@@ -2,6 +2,10 @@
 
 1.1  IMMEDIATELY INSTALL:
 
+SEE ALSO:
+lib-note.txt
+(this is old, and may not be needed.....depends on your OS/Ver)
+
 	(You will, WILL see the following:
 	....XXXX....YYYY.../GitHub/zoe/0.5.7/main.c:112:10: fatal error: readline/readline.h: No such file or directory
 	  112 | #include <readline/readline.h>
