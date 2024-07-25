@@ -1,0 +1,30 @@
+Seeing:
+
+Segmentation fault (core dumped)
+
+??
+
+You are in the wrong directory!!
+
+Move 'back' by one level, and execute the Thing from 'this'
+directory from there !!
+
+i.e.
+
+being in This directory, and running:
+
+	../zoe TTT-Database-SQL.zoe
+
+will result in:
+
+	"Segmentation fault (core dumped)"
+
+so!!
+
+cd ..   (move 'back one')
+
+and execute:
+
+	zoe ./000-New/TTT-Database-SQL.zoe
+
+This should solve the problem.
