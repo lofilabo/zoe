@@ -1,6 +1,21 @@
 1. Compile
 
+1.1  IMMEDIATELY INSTALL:
+
+	(You will, WILL see the following:
+	....XXXX....YYYY.../GitHub/zoe/0.5.7/main.c:112:10: fatal error: readline/readline.h: No such file or directory
+	  112 | #include <readline/readline.h>
+		      |          ^~~~~~~~~~~~~~~~~~~~~
+	)
+
+	 sudo apt-get install libreadline-dev
+
+     AND THEN we can install application!
+     STEP 1.
+
 	cmake .
+
+     STEP 2.
 
 	make
 
@@ -10,7 +25,12 @@
 
 	the command is:
 
+
+      STEP 3. { 2 Possibilities!! }
 	make install
+
+	^^^^^^^^^^^MAYBE you have to run this as sudo:
+		sudo make install
 
 1.3 Delete an Unwanted File
 	**You Will See A Fail Message**
