@@ -66,14 +66,20 @@ oh look !
 		^.^ the failure is hapenning........ 
 		^.^ 'getting away with...' are the reasons that the next 2 lines are Commented:
 		^.^ TEMPORARILY COMMENTED LINES (next 2)::
-		^.^ 	positionList <-=- toysoldiers>--[ positionList {.} " " ]--<	
-		^.^ 	positionList <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ positionList zAnd " " zAnd 1 ]--< 
+		^.^
+		^.^ Later, we learned.....
+		^.^ Have to fix this problem.....
+		positionList <-=- toysoldiers>--[ positionList {.} "*" ]--<	
+		positionList <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ positionList zAnd " " zAnd 1 ]--< 
+		^.^ REALLY?
+		^.^ WILL THIS DO?
+		^.^ ADD '*' TO EVERYTHING....?
+		^.^ CHECK AND CHECK !!
+
 
 		var21 <-=- toysoldiers>--[ var21 {.} " " ]--<
 		var21 <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ var21 zAnd " " zAnd 1 ]--< 
-
-
-		^.^pencil "positionList>>" positionList "<< var21>>" var21 "<<"
+		pencil "positionList>>" positionList "<< var21>>" var21 "<<"
 
 			zoe_same positionList {.} var21
 			zoe_match?
