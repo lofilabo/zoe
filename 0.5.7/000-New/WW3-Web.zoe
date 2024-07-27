@@ -56,7 +56,7 @@ oh look !
         }^.^
 
 	^.^ CAN HAS STDIO?
-	I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html50.txt" zAnd "r" ]--<
+	I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html50.htm" zAnd "r" ]--<
 	I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
 	I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 40024 ]--<
 

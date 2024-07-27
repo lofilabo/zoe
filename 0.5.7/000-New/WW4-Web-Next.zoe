@@ -1,0 +1,114 @@
+oh look !
+
+	pencil "Point your Browser at this:"
+	pencil "127.0.0.1:13332"
+
+	CAN HAS STDIO?
+	CAN HAS SOCKS?
+	CAN HAS STRING?
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13332 ]--<
+
+	I define zuwar2 = ""
+	I define s = 0
+    I define positionList = ""
+    I define mainNote01 = ""
+    I define mainNote02 = ""
+
+	I define textContent10 = ""
+	I define textContent20 = ""
+	I define textContent30 = ""
+	I define textContent40 = ""
+
+	I define textContent35 = ""
+    I define textContent36 = ""
+    I define textContent80 = ""
+    I define textContent99 = ""
+
+    pencil "You are Here now"
+
+	zoe_loop_begin loop
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1024 ]--<
+
+		I define slotIn = cmd
+		
+		zuwar2 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ slotIn zAnd "H" zAnd 1 ]--<
+		positionList <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ zuwar2 zAnd "/" zAnd 0 ]--<
+
+
+		^.^ mainNote01 <-=- "This will eventually be Content. Unchanged"
+		mainNote01 <-=- "letterUP"
+
+		^.^ START selection of page......
+			I define var11 = "letterUP  "
+			I define var21 = "letterUP  "
+
+			I define var31 = "letterDOWN"
+			I define var41 = "letterMIDDLE"
+			I define var51 = "letterOUT"
+
+		^.^ Do a favour.  Strip off the buzzle that starts with a spect ( " " ) at the end.
+		positionList <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ positionList zAnd " " zAnd 1 ]--< 
+		var21 <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ var21 zAnd " " zAnd 1 ]--< 
+		^.^pencil "positionList>>" positionList "<< var21>>" var21 "<<"
+
+			zoe_same positionList {.} var21
+			zoe_match?
+				zoe_pass
+					mainNote01 <-=- "Pass: Stage 1"
+					mainNote02 <-=- "Text for letterUP."
+					pencil "You Passed Stage 1"
+
+				zoe_else zoe_same positionList {.} var31
+					mainNote01 <-=- "Pass: Stage 3"
+					mainNote02 <-=- "Text for letterDOWN"
+					pencil "You Passed Stage 3 (letterDOWN)"
+
+				zoe_else zoe_same positionList {.} var41
+					mainNote01 <-=- "Pass: Stage 4"
+					mainNote02 <-=- "Text for letterMIDDLE."
+					pencil "You Passed Stage 4 (letterMIDDLE)"
+
+				zoe_else zoe_same positionList {.} var51
+					mainNote01 <-=- "Pass: Stage 5 (letterOUT)"
+					mainNote02 <-=- "Text for letterOUT."
+					pencil "You Passed Stage 5"
+
+				zoe_fail
+					mainNote01 <-=- "Pass: Stage Nothing"
+					mainNote02 <-=- "Text for "
+					pencil "You Failed."
+			zoe_oh_I_see
+
+		^.^ ......END the selection of page
+
+
+
+		
+
+		pencil positionList
+		I define reply = ""
+
+		^.^ CAN HAS STDIO?
+		I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html60.htm" zAnd "r" ]--<
+		I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
+		I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 40024 ]--<
+		
+		reply <-=- contents
+			^.^ This is not our work - only the translation to zoe.
+			I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+	       	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+			s <-=- z+ s {.} 1
+
+	zoe_loop_end loop
+
+
+pencil "END OF FILE"
+I see !

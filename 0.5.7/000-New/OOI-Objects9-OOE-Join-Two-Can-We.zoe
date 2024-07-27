@@ -1,0 +1,92 @@
+	oh look !
+
+	I define Array_1_1_father -of-> zoe_array
+	I define Array_2_1_father -of-> zoe_array
+	I define Array_1_2_baby -of-> zoe_array
+	I define Array_2_2_baby -of-> zoe_array
+	I define Array_1_3_mother -of-> zoe_array
+	I define Array_2_3_mother -of-> zoe_array
+
+	Array_1_2_baby define testVal1 = "Objet"
+	pencil Array_1_2_baby --toBaby--> testVal1
+
+	^.^{
+	NOTE TO SELF::Array_1_1_father is an Object here!!
+	(or....could we say Class ?)
+	It has a Function!
+	It can DO things instead of just BE things.
+	}^.^
+
+	^.^ Fathers function (manual labour).
+	function Array_1_1_father Function_1_1 <--[ incoming1 zAnd incoming2
+		pencil ">>Now Inside Function Function_1_1"
+		pencil toysoldiers>--[ "===>" incoming1 ": " incoming2 ]--<
+		zReturn "=>Returning from Function_1_1 (No. 1)"
+	end_of_function
+
+	function Array_1_1_father Function_1_2 <--[ incoming1 zAnd incoming2
+		pencil ">>Now Inside Function Function_1_2"
+		pencil toysoldiers>--[ "===>" incoming1 ": " incoming2 ]--<
+		zReturn "=>Returning from Function_1_2 (No. 2)"
+	end_of_function
+
+	function Array_2_1_father Function_1_2 <--[ incoming1 zAnd incoming2
+		pencil ">>Now Inside Function Function_1_2"
+		pencil toysoldiers>--[ "===>" incoming1 ": " incoming2 ]--<
+		zReturn "=>Returning from Function_1_2 (No. 2)"
+	end_of_function
+
+	function Array_2_1_father Function_2_2 <--[ incoming1 zAnd incoming2
+		pencil ">>Now Inside Function Function_1_2"
+		pencil toysoldiers>--[ "===>" incoming1 ": " incoming2 ]--<
+		zReturn "=>Returning from Function_1_2 (No. 2)"
+	end_of_function
+
+	^.^ Mothers define Babies (have wombs).
+	Array_1_3_mother define Array_1_2_baby zoe_derivedFrom Array_1_1_father
+	^.^ "Array_1_3_mother has a baby, Array_1_2_baby, fathered by Array_1_1
+	^.^  The baby exists between its parent ^.^
+
+	pencil "Look At retVal (inside route)"
+
+	I define retVal = ""
+
+	I define retVal1 = ""
+	I define retVal2 = ""
+	I define retVal3 = "Three"
+	I define retVal4 = "Four"
+	I define retValA -of-> zoe_array
+	I define retValB -of-> zoe_array
+	I define retValC -of-> zoe_array
+	I define retValD -of-> zoe_array
+
+
+	retVal <-=- Array_1_1_father wish_to_call Function_1_1 <--[ "[calling from] " zAnd "Array_1_1" ]--<
+	pencil retVal
+
+	retVal <-=- Array_1_1_father wish_to_call Function_1_2 <--[ "[calling from] " zAnd "Array_1_1" ]--<
+	pencil retVal
+	
+	retVal1 <-=- Array_1_3_mother --toBaby--> Array_1_2_baby wish_to_call Function_1_1 <--[ "[calling from] " zAnd "Array_1_3" ]--<
+	pencil retVal1
+
+	retVal2 <-=- Array_1_3_mother --toBaby--> Array_1_2_baby wish_to_call Function_1_2 <--[ "[calling from] " zAnd "Array_1_3" ]--<
+	pencil retVal2
+
+
+^.^	Oh dear.
+^.^	We hoped to compine two Objects into a single Object.
+^.^     But, the most we could to is to join two ARRAYS.
+^.^	I HAS A ZipFileRiver ITZ A River     SMOOSH          FileStuffz AN ZipStuffz
+^.^	I define retValB    -of->  zoe_array 
+	
+	^.^ This behaves. 
+	retValB <-=- toysoldiers>--[ retVal3 {.} retVal4 ]--<
+
+	^.^ This does not.
+	^.^retValB <-=- toysoldiers>--[ retValC {.} retValD ]--<
+
+	^.^ This does not :: "Cannot cast array to string value"
+	^.^ Maybe!!  Look again in the future......
+	^.^ retValB <-=- toysoldiers>--[ Array_1_1_father {.} Array_2_1_father ]--<
+I see !
