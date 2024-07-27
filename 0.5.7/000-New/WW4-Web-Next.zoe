@@ -39,6 +39,7 @@ oh look !
 
 		I define slotIn = cmd
 		
+
 		zuwar2 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ slotIn zAnd "H" zAnd 1 ]--<
 		positionList <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ zuwar2 zAnd "/" zAnd 0 ]--<
 
@@ -47,16 +48,31 @@ oh look !
 		mainNote01 <-=- "letterUP"
 
 		^.^ START selection of page......
-			I define var11 = "letterUP  "
-			I define var21 = "letterUP  "
+			I define var11 = "letterUP"
+			I define var21 = "letterUP"
 
 			I define var31 = "letterDOWN"
 			I define var41 = "letterMIDDLE"
 			I define var51 = "letterOUT"
 
 		^.^ Do a favour.  Strip off the buzzle that starts with a spect ( " " ) at the end.
-		positionList <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ positionList zAnd " " zAnd 1 ]--< 
+
+
+		^.^ WE GOT AWAY WITH THIS:
+		^.^ maybe....hopefully...it is not necessary to pick out spaces from this point.
+		^.^ So we don't even need to try.
+		^.^ BUT...
+		^.^ IF YOU SEE 'Segmentation fault (core dumped)' here, drop some 'Here 1' markers to track where 
+		^.^ the failure is hapenning........ 
+		^.^ 'getting away with...' are the reasons that the next 2 lines are Commented:
+		^.^ TEMPORARILY COMMENTED LINES (next 2)::
+		^.^ 	positionList <-=- toysoldiers>--[ positionList {.} " " ]--<	
+		^.^ 	positionList <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ positionList zAnd " " zAnd 1 ]--< 
+
+		var21 <-=- toysoldiers>--[ var21 {.} " " ]--<
 		var21 <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ var21 zAnd " " zAnd 1 ]--< 
+
+
 		^.^pencil "positionList>>" positionList "<< var21>>" var21 "<<"
 
 			zoe_same positionList {.} var21
