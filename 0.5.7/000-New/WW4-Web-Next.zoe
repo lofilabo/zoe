@@ -1,7 +1,7 @@
 oh look !
 
 	pencil "Point your Browser at this:"
-	pencil "127.0.0.1:13332"
+	pencil "127.0.0.1:13331"
 
 	CAN HAS STDIO?
 	CAN HAS SOCKS?
@@ -10,13 +10,14 @@ oh look !
 	CAN HAS STDIO?
 
 	I define sock
-	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13332 ]--<
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13331 ]--<
 
 	I define zuwar2 = ""
 	I define s = 0
     I define positionList = ""
     I define mainNote01 = ""
     I define mainNote02 = ""
+    I define reply = ""
 
 	I define textContent10 = ""
 	I define textContent20 = ""
@@ -81,12 +82,30 @@ oh look !
 		var21 <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ var21 zAnd " " zAnd 1 ]--< 
 		pencil "positionList>>" positionList "<< var21>>" var21 "<<"
 
-			zoe_same positionList {.} var21
+			zoe_same positionList {.} "favicon.ico"
 			zoe_match?
 				zoe_pass
 					mainNote01 <-=- "Pass: Stage 1"
 					mainNote02 <-=- "Text for letterUP."
 					pencil "You Passed Stage 1"
+					pencil "And!! Hit favicon.ico (so...what next?)"
+
+					^.^ mini version of read-and-reply to deal with favicon.ico request.
+					I define readFileSpare = I wish_to_call STDIO --toBaby--> OPEN <--[ "favicon.ico" zAnd "r" ]--<
+					pencil readFileSpare					
+					I wish_to_call STDIO --toBaby--> DIAF <--[ readFileSpare ]--< 
+					I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFileSpare zAnd 40024 ]--<
+					^.^ pencil contents				
+					reply <-=- contents
+					I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+				       	^.^ I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+
+
+				zoe_else zoe_same positionList {.} var21
+					mainNote01 <-=- "Pass: Stage 2"
+					mainNote02 <-=- "Text for letterUP"
+					pencil "You Passed Stage 3 (letterUP)"
 
 				zoe_else zoe_same positionList {.} var31
 					mainNote01 <-=- "Pass: Stage 3"
@@ -105,8 +124,8 @@ oh look !
 
 				zoe_fail
 					mainNote01 <-=- "Pass: Stage Nothing"
-					mainNote02 <-=- "Text for "
-					pencil "You Failed."
+					mainNote02 <-=- "Text for NO PAGE MATCHED"
+					pencil "You Failed (but we will pass....to home page)."
 			zoe_oh_I_see
 
 		^.^ ......END the selection of page
