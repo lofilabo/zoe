@@ -1,0 +1,45 @@
+oh look ! 
+
+^.^	CAN HAS STDIO?
+^.^	CAN HAS SOCKS?
+^.^	CAN HAS STRING?
+^.^	CAN HAS MYLIB?
+^.^	CAN HAS STDIO?
+
+	I define retVal  -of-> zoe_string
+
+	I define var01 = ""
+	I define var02 = ""
+	I define var03 = ""
+
+	I define varGLOBAL1 = ""
+
+	function I myFunctionBasic <--[ arriving_value
+		pencil "Basic Function Called"
+		pencil toysoldiers>--[ "  Global Val: " ": " varGLOBAL1 ]--<
+		pencil toysoldiers>--[ "    1 Value:  " ": " arriving_value ]--<
+		varGLOBAL1 <-=- "Global Value 2"
+	end_of_function
+
+
+	function I myFunctionMore <--[ arriving_value zAnd second_value zAnd third_value
+		pencil "Return Fuction Called"
+		pencil toysoldiers>--[ "  Global Val: " ": " varGLOBAL1 ]--<
+		pencil toysoldiers>--[ "    3 Values" ": " arriving_value "; " second_value "; " third_value ]--<
+		varGLOBAL1 <-=- "Global Value 3"
+	zReturn "I Came Back"
+	end_of_function
+
+	pencil ""
+	pencil "F U N C T I O N  ! ! ! ! "
+	pencil ""
+	varGLOBAL1 <-=- "Global Value 1"
+	I wish_to_call myFunctionBasic <--[ "blubble" ]--<
+	pencil toysoldiers>--[ "Global Val: (in Controller)" ": " varGLOBAL1 ]--<
+	pencil ""
+	retVal <-=- I wish_to_call myFunctionMore <--[ 44.4 zAnd 333 zAnd "Jamie!" ]--<
+	pencil toysoldiers>--[ "Global Val: (in Controller)" ": " varGLOBAL1 ]--<	
+	pencil ""
+	pencil toysoldiers>--[ "returned vale" ": " retVal ]--<
+
+I see !

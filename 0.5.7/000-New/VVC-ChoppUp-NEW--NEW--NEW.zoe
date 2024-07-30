@@ -1,0 +1,73 @@
+oh look ! 
+
+
+^.^{
+If you are NOT SURE whether or nor a string actually contains a 'separator'
+Do this to check!
+
+1.  Add the tested separator onto the end of the string
+
+2. 'test' for it.
+
+3.  In this case, we will add a '&' to the end of the string
+
+}^.^
+
+
+CAN HAS MYLIB?
+CAN HAS STDIO?
+
+	I define survivingData444 = ""
+	I define survivingData888 = ""
+	I define allDataTaken55 = ""
+	I define allDataTaken56 = ""
+	I define Follow55 = 0
+
+
+	^.^ 1. Use toysoldier to drop onto the END one exaple of the separator we are 'unsure' of
+	^.^    This will stop error if there is NO appearence of this elshwhere in the text
+
+
+	^.^ MAKE YOUR CHOICE!!  MAKE YOUR CHOICE!!  MAKE YOUR CHOICE!!  
+	survivingData444 <-=- "item1;item2;item3;" ^.^ v.1 - no '&' in the string
+	^.^    survivingData444 <-=- "item1;item2&item3;" ^.^ v.2 - a '&' is already in the string!!
+
+	^.^ ADD A 'Suspicious; CHAR OM THE END.
+	survivingData444 <-=- toysoldiers>--[  survivingData444  {.} "&" ]--<
+	^.^ we can now check for "&", and not fear failure - because there is always one!
+	survivingData888 <-=- survivingData444 ^.^ side-copy for test 2.
+
+ 
+	^.^positionList <-=- toysoldiers>--[ positionList {.} "*" ]--<
+
+
+	^.^	We will keep this line, and not delete it, because it may be useful in the future.
+	  	allDataTaken55 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ survivingData444 zAnd "&" zAnd 1 ]--<
+
+	pencil toysoldiers>--[ "starting data : " survivingData444 ]--<
+
+	^.^  EXAMPLE 1.  Check for a divider which May Be in the string.
+	  	survivingData444 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+		<--[ survivingData444 ...
+		zAnd "&" ...
+		zAnd 0 ...
+		]--<
+
+		pencil toysoldiers>--[ "'taken' item  : " allDataTaken55 ]--<
+		pencil toysoldiers>--[ "surviving data: " survivingData444 ]--<
+
+	^.^  EXAMPLE 2.  Check for a divider which *IS* in the string.
+ 	  	survivingData888 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+ 		<--[ survivingData888 ...
+ 		zAnd ";" ...
+ 		zAnd 0 ...
+ 		]--<
+
+		pencil toysoldiers>--[ "'taken' item  : " allDataTaken55 ]--<
+ 		pencil toysoldiers>--[ "surviving data: " survivingData888 ]--<
+
+
+
+
+
+I see !
