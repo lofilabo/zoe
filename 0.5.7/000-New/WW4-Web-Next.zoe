@@ -84,6 +84,11 @@ oh look !
 
 			zoe_same positionList {.} "favicon.ico"
 			zoe_match?
+				^.^  PART 1.
+				^.^  Deal with nothing but the specal call (favicon.ico)
+				^.^  Check for this First!!
+				^.^  If it is found, we can deal with this by iself.  
+				^.^  Not even look for another thing-to-do.
 				zoe_pass
 					mainNote01 <-=- "Pass: Stage 1"
 					mainNote02 <-=- "Text for letterUP."
@@ -101,7 +106,8 @@ oh look !
 				       	^.^ I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
 
 
-
+				^.^  PART 2.
+				^.^  Everything Else !!
 				zoe_else zoe_same positionList {.} var21
 					mainNote01 <-=- "Pass: Stage 2"
 					mainNote02 <-=- "Text for letterUP"
