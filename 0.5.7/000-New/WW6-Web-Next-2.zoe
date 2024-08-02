@@ -1,0 +1,352 @@
+oh look !
+
+	pencil "Point your Browser at this:"
+	pencil "127.0.0.1:13331"
+
+	CAN HAS STDIO?
+	CAN HAS SOCKS?
+	CAN HAS STRING?
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13331 ]--<
+
+	I define zuwar2 = ""
+	I define s = 0
+	I define positionList = ""
+	I define mainNote01 = ""
+	I define mainNote02 = ""
+	I define reply = ""
+
+	I define textContent10 = ""
+	I define textContent20 = ""
+	I define textContent30 = ""
+	I define textContent40 = ""
+
+	I define textContent35 = ""
+	I define textContent36 = ""
+	I define textContent80 = ""
+	I define textContent99 = ""
+
+
+	^.^ New
+	I define var01 = ""
+	I define var02 = ""
+	I define varIN = ""
+	I define retVal = ""
+
+
+
+
+
+
+
+
+		I define var_GLOBAL_PUBLIC_1 = ""
+
+		^.^ START FUNCTION HERE
+		^.^ ------------------------------------------------------------------------------------------------------------------
+		^.^
+		^.^ We use this project develop a Function which can be used elswhere.
+
+		^.^ 1.	varINA -- The data being looked at
+		^.^ 2.	qMark  -- named after first one: question-mark. 
+		^.^		  A.K.A 'separator character'
+		^.^ e.g: retVal <-=- I wish_to_call StripLine  <--[ "before?after" zAnd "?" ]--<
+		^.^ e.g: retVal <-=- I wish_to_call StripLine  <--[ "both_of_them" zAnd "?" ]--<
+		^.^ And don't forget to look at (global var) var_GLOBAL_PUBLIC_1
+
+
+		function I StripLine <--[ varINA zAnd qMark
+
+
+			^.^ pencil "ENTERING FUNCTION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+			^.^ pencil "INCOMING varINA : " varINA
+			^.^ pencil "INCOMING qMark  : " qMark
+
+			I define var03 = ""
+			I define var04 = ""
+			I define var05 = ""
+			I define var06 = ""
+
+			I define varTYPE = ""
+			I define varOUT = ""
+
+			var06 <-=- varINA
+
+			^.^ BOLT-ON a ? to the very end, so that we can Test forwhat-comes-after ? and NOT MESS UP.
+			^.^ in the future, enter function here - def'n of varINA
+			^.^ we ADD a ? to the end of the string so that 'failing' the test will not stop execution.
+			var03 <-=- toysoldiers>--[ varINA {.} qMark ]--<	
+
+			^.^ pencil var03
+
+			^.^ Having added a ? to the end, for safety,
+			^.^ let's separate the END HALF of the txt (zAnd 0 <-- 0=end)
+			^.^ Chop-up once based on ?.
+			
+		  	var04 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+				<--[ var03 ...
+				zAnd qMark ...
+				zAnd 0 ...
+			]--<
+
+			^.^ pencil var04
+
+
+			^.^	Let's now test to see is there is anything AFTER
+			^.^	the ?.  
+			^.^	If there is, we know that var03 is a datainput?data1=qwert - type.
+			^.^	If there is not, we know it is of the letterUP type (with no ?)
+
+			^.^ Check the value of whatever is AFTER the ?
+			^.^ IF there is a ? in the middle of the string, we will have
+			^.^ 'something' after it.
+			^.^ BUT!! If there is only a "" After the ?, we can conclude that there
+			^.^ is no ? in the middle of the string.
+
+			zoe_same var04 {.} ""
+			zoe_match?
+				zoe_pass
+					pencil "there is NOT a ? in this"
+					varTYPE <-=- 0
+					^.^ We know that there is NOT a ? in this
+
+					^.^ we have discovered that there is no ? in here.
+					^.^ Return the Original.  Nothing else needed.
+					varOUT <-=- varINA
+					var_GLOBAL_PUBLIC_1 <-=- ""
+				zoe_fail
+					^.^ The important part of this function.....
+					^.^ There is a ? in the MIDDLE of the string.
+					^.^ Let's chop it up, and the 'data' is RETURNED,
+					^.^ but The Bit Before ? is STORED GLOBALLY ( var_GLOBAL_PUBLIC_1 )
+					
+					pencil "there IS a ? in this!"
+
+					varTYPE <-=- 1
+					^.^ We know there IS a ? in this.
+
+
+					^.^ Let's get the FRONT part of the string now.
+					^.^ front-half => zAnd 1
+^.^ pencil "YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  "  
+					var_GLOBAL_PUBLIC_1 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+						<--[ var06 ...
+						zAnd qMark ...
+						zAnd 1 ...
+					]--<
+^.^ pencil var_GLOBAL_PUBLIC_1
+
+					^.^ Cut Off the 'added' ?
+				  	var04 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
+						<--[ var04 ...
+						zAnd qMark ...
+						zAnd 1 ...
+					]--<
+
+					varOUT <-=- var04
+			zoe_oh_I_see
+			pencil "0=no-? ; 1=presence-of-? -->  " varTYPE 
+			^.^  pencil "Out Val: " varOUT
+
+			^.^ spit the main text back to the function.
+			^.^ 'do something' with the name of the expected process 
+			^.^ i.e. thing-to-do?valueName
+^.^ pencil "LEAVING FUNCTION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+		zReturn varOUT
+		end_of_function
+
+		^.^ -------------------------------------------------------------------------------------------------------
+		^.^ 
+		^.^ END FUCTION HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    pencil "You are Here now"
+
+	zoe_loop_begin loop
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1024 ]--<
+
+		I define slotIn = cmd
+		
+
+		zuwar2 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ slotIn zAnd "H" zAnd 1 ]--<
+		positionList <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ zuwar2 zAnd "/" zAnd 0 ]--<
+
+
+		^.^ mainNote01 <-=- "This will eventually be Content. Unchanged"
+		mainNote01 <-=- "letterUP"
+
+		^.^ START selection of page......
+			I define var11 = "letterUP"
+			I define var21 = "letterUP"
+
+			I define var31 = "letterDOWN"
+			I define var41 = "letterMIDDLE"
+			I define var51 = "letterOUT"
+
+		^.^ Do a favour.  Strip off the buzzle that starts with a spect ( " " ) at the end.
+
+
+		^.^ WE GOT AWAY WITH THIS:
+		^.^ maybe....hopefully...it is not necessary to pick out spaces from this point.
+		^.^ So we don't even need to try.
+		^.^ BUT...
+		^.^ IF YOU SEE 'Segmentation fault (core dumped)' here, drop some 'Here 1' markers to track where 
+		^.^ the failure is hapenning........ 
+		^.^ 'getting away with...' are the reasons that the next 2 lines are Commented:
+		^.^ TEMPORARILY COMMENTED LINES (next 2)::
+		^.^
+		^.^ Later, we learned.....
+		^.^ Have to fix this problem.....
+		positionList <-=- toysoldiers>--[ positionList {.} "*" ]--<	
+		positionList <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ positionList zAnd " " zAnd 1 ]--< 
+		^.^ REALLY?
+		^.^ WILL THIS DO?
+		^.^ ADD '*' TO EVERYTHING....?
+		^.^ CHECK AND CHECK !!
+
+^.^ --------------------------------------------------------------------------------------------------------------------
+^.^{
+		var01 <-=- "OnlyDataIsHere"
+		var02 <-=- "datainput?DataPlusQuestionIsHere"
+
+		pencil ".................................................."
+
+		^.^ Chance 1. No ?
+		varIN <-=- var01
+		pencil "Going in..... " varIN
+		retVal <-=- I wish_to_call StripLine  <--[ varIN zAnd "?" ]--<
+		^.^ Now let's check the public var which holds the 'bit before' ?
+		pencil "    Before ? (Public): " var_GLOBAL_PUBLIC_1
+		pencil "    Returned Value:: " retVal
+		pencil ".................................................."
+		^.^ Chance 2. Is ?
+		varIN <-=- var02
+		pencil "Going in..... " varIN
+		retVal <-=- I wish_to_call StripLine  <--[ varIN zAnd "?" ]--<
+		^.^ Now let's check the public var which holds the 'bit before' ?
+		pencil "    Before ? (Public): " var_GLOBAL_PUBLIC_1
+		pencil "    Returned Value:: " retVal
+		pencil ".................................................."
+}^.^
+
+^.^ --------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+		varIN <-=- positionList
+^.^ pencil "Var coming in::::::" varIN
+		retVal <-=- I wish_to_call StripLine  <--[ varIN zAnd "?" ]--<		
+^.^ pencil "RETURNED VAL -- SHOULD bE NO ??????? AT ALL: " retVal
+
+
+
+		var21 <-=- toysoldiers>--[ var21 {.} " " ]--<
+		var21 <-=-  I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ var21 zAnd " " zAnd 1 ]--< 
+^.^		pencil "positionList>>" positionList "<< var21>>" var21 "<<"
+
+			zoe_same positionList {.} "favicon.ico"
+			zoe_match?
+				^.^  PART 1.
+				^.^  Deal with nothing but the specal call (favicon.ico)
+				^.^  Check for this First!!
+				^.^  If it is found, we can deal with this by iself.  
+				^.^  Not even look for another thing-to-do.
+				zoe_pass
+					mainNote01 <-=- "Pass: Stage 1"
+					mainNote02 <-=- "Text for letterUP."
+					pencil "You Passed Stage 1"
+					pencil "And!! Hit favicon.ico (so...what next?)"
+
+					^.^ mini version of read-and-reply to deal with favicon.ico request.
+					I define readFileSpare = I wish_to_call STDIO --toBaby--> OPEN <--[ "favicon.ico" zAnd "r" ]--<
+					pencil readFileSpare					
+					I wish_to_call STDIO --toBaby--> DIAF <--[ readFileSpare ]--< 
+					I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFileSpare zAnd 40024 ]--<
+					^.^ pencil contents				
+					reply <-=- contents
+					I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+				       	^.^ I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+
+				^.^  PART 2.
+				^.^  Everything Else !!
+				zoe_else zoe_same positionList {.} var21
+					mainNote01 <-=- "Pass: Stage 2"
+					mainNote02 <-=- "Text for letterUP"
+					pencil "You Passed Stage 3 (letterUP)"
+
+				zoe_else zoe_same positionList {.} var31
+					mainNote01 <-=- "Pass: Stage 3"
+					mainNote02 <-=- "Text for letterDOWN"
+					pencil "You Passed Stage 3 (letterDOWN)"
+
+				zoe_else zoe_same positionList {.} var41
+					mainNote01 <-=- "Pass: Stage 4"
+					mainNote02 <-=- "Text for letterMIDDLE."
+					pencil "You Passed Stage 4 (letterMIDDLE)"
+
+				zoe_else zoe_same positionList {.} var51
+					mainNote01 <-=- "Pass: Stage 5 (letterOUT)"
+					mainNote02 <-=- "Text for letterOUT."
+					pencil "You Passed Stage 5"
+
+				zoe_fail
+					mainNote01 <-=- "Pass: Stage Nothing"
+					mainNote02 <-=- "Text for NO PAGE MATCHED"
+					pencil "You Failed (but we will pass....to home page)."
+			zoe_oh_I_see
+
+		^.^ ......END the selection of page
+
+
+		pencil "RTN'D  VAR varIN               ==>" retVal "<=="
+		pencil "GLOBAL VAR var_GLOBAL_PUBLIC_1 -->" var_GLOBAL_PUBLIC_1 "<--"
+
+^.^		pencil positionList
+		I define reply = ""
+
+		^.^ CAN HAS STDIO?
+		I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html60.htm" zAnd "r" ]--<
+		I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
+		I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 40024 ]--<
+		
+		reply <-=- contents
+			^.^ This is not our work - only the translation to zoe.
+			I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+	       	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+			s <-=- z+ s {.} 1
+
+	zoe_loop_end loop
+
+
+pencil "END OF FILE"
+I see !
