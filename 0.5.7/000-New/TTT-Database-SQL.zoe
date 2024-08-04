@@ -50,10 +50,10 @@ This is why the 'returned message' is written to zdb_output_data.txt
 
 	^.^ AVAILABLE ACTONS.
 	^.^ Switch them on and off according to your wishes :)
-	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable" ]--<
+	pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable" ]--<
 	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1" ]--<
 	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1 or id=2" ]--<
-	pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id<>1 and id<>2" ]--<
+	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id<>1 and id<>2" ]--<
 
 	^.^ this pencile prints the Reurn vales from the C part
 	^.^ ^^^^^^^^^^^^^^This took place in the 'background', but is printed on return ('pencil I wish_to_call MYLIB --toBa.....')"

@@ -1,0 +1,29 @@
+oh look ! 
+^.^{
+This is an EXAMPLE.
+For better reference, please look at ../TTT-Database-XXXX
+}^.^
+	CAN HAS MYLIB?
+
+	^.^ pencil "this is from background.  Please check >> zdb_output_data.txt  << for the actual results"
+	pencil "Results:"
+
+	pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable" ]--<
+	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1" ]--<
+	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1 or id=2" ]--<
+	^.^ pencil I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id<>1 and id<>2" ]--<
+
+	^.^ THE RESULTS are NOT retuend to us.
+	^.^ They are put into zdb_output_data.txt
+	^.^ Let's look at them:
+
+	pencil "We just watched the data being collected WITHIN the database."
+	pencil "Now, let's see what data has been returned to us (in: zdb_output_data.txt)"
+	CAN HAS STDIO?
+	I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "zdb_output_data.txt" zAnd "r" ]--<
+	I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
+	I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 1024 ]--<
+	pencil contents
+
+
+I see !

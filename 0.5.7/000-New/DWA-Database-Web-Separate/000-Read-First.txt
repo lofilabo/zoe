@@ -1,0 +1,31 @@
+001. Intro
+
+This is a *separate project* which contains ITS OWN
+database, and COPY of the database-access programme.
+
+This is done to help us work only on the Zoe aspect!
+The C programming (for the database access) should be
+separate from here ;)
+
+What have is:
+
+i.	EXECUTABLE to allow us to read/write from database.
+
+ii.	DATABASE 'DRIVER'
+
+iii.	DATABASE ONLY for this section.
+
+
+i.e.
+
+zdb_basement
+
+zdb_data.db
+
+zdb_output_data.txt
+
+as usual, we can test like this:
+
+	./zdb_basement "select * from testtable where id=1"
+
+(and then change the SQL to test more and more)
