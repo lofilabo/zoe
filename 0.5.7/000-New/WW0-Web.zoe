@@ -1,0 +1,74 @@
+oh look !
+
+	pencil "Point your Browser at this:"
+	pencil "127.0.0.1:13331"
+
+	CAN HAS STDIO?
+	CAN HAS SOCKS?
+	CAN HAS STRING?
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13331 ]--<
+
+	I define zuwar2 = ""
+	I define s = 0
+    I define positionList = ""
+
+	I define textContent10 = ""
+	I define textContent20 = ""
+	I define textContent30 = ""
+	I define textContent40 = ""
+
+	I define textContent35 = ""
+
+    I define textContent99 = ""
+
+    pencil "You are Here now"
+
+	zoe_loop_begin loop
+
+		pencil "Loopy"
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1024 ]--<
+
+		I define slotIn = cmd
+		
+		zuwar2 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ slotIn zAnd "H" zAnd 1 ]--<
+		positionList <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ zuwar2 zAnd "/" zAnd 0 ]--<
+
+		I define reply = ""
+
+        textContent10 <-=- "HTTP/1.1 200 OK:3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)"
+^.^        textContent10 <-=- ""
+        textContent20 <-=- "<html><body>Hello from Zoe<br/> "
+        textContent40 <-=- "</body></html>"
+        
+        I define textContent99 = toysoldiers>--[ textContent10 ...
+            textContent20 {.} ...
+            textContent30 ...
+            textContent35 ...
+            textContent40 ...
+         ]--<	^.^ SPACE NEEDED BEFORE  ]--< because of ...
+        
+        ^.^ textContent99 <-=- "HTTP/1.1 200 OK:3:) Server: httpd.zoe/0.1 (lci):3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)<html><body><h1>Current Call</h1><img src=https://www.1010.or.jp/map/wp-content/uploads/2015/03/naminoyu-top-250x170.jpg><br/> :{positionList}:3:)</body></html>"
+
+        
+        reply <-=- textContent99
+		^.^ This is not our work - only the translation to zoe.
+		I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+		^.^ I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd "1234" ]--<
+		I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd "5678" ]--<
+       	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+		s <-=- z+ s {.} 1
+		pencil "END OF LOOP"
+		pencil s
+	zoe_loop_end loop
+
+
+pencil "END OF FILE"
+I see !
