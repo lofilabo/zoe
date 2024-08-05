@@ -43,9 +43,10 @@ oh look !
 
 		I define reply = ""
 
-        textContent10 <-=- "HTTP/1.1 200 OK:3:) Context-Type: text/html:3:) Content-Length: 19:3:):3:)"
+        textContent10 <-=- "HTTP/1.1 200 OK:3:) Context-Type: text/html:3:) Content-Length: 9:3:):3:)"
+^.^ ----------------------------------------------------------------------------------------^---length of string
 ^.^        textContent10 <-=- ""
-        textContent20 <-=- "<html><body>Hello from Zoe<br/> "
+        textContent20 <-=- "<html><body>Hello Zoe<br/> "
         textContent40 <-=- "</body></html>"
         
         I define textContent99 = toysoldiers>--[ textContent10 ...
@@ -61,9 +62,7 @@ oh look !
         reply <-=- textContent99
 		^.^ This is not our work - only the translation to zoe.
 		I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
-		^.^ I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd "1234" ]--<
-		I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd "5678" ]--<
-       	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+		       	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
 		s <-=- z+ s {.} 1
 		pencil "END OF LOOP"
 		pencil s

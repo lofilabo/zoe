@@ -1,0 +1,45 @@
+oh look !
+
+    CAN HAS STDIO?
+    CAN HAS SOCKS?
+    CAN HAS STRING?
+
+I see !
+
+
+^.^{
+
+HAI 1.4
+
+    CAN HAS STDIO?
+    CAN HAS SOCKS?
+    CAN HAS STRING?
+
+    I HAS A sock
+    sock R I IZ SOCKS'Z BIND YR "127.0.0.1" AN YR 13336 MKAY
+
+    IM IN YR loop
+        I HAS A conn
+        conn R I IZ SOCKS'Z LISTN YR sock MKAY
+
+        I HAS A cmd
+        cmd R I IZ SOCKS'Z GET YR sock AN YR conn AN YR 1024 MKAY
+        
+        I HAS A reply ITZ ""
+	I HAS A data ITZ "zoe will say hello Doctor..."
+	I HAS A len ITZ I IZ STRING'Z LEN YR data MKAY
+        
+            reply R SMOOSH "HTTP/1.1 200 OK:3:)"...
+                    AN "Server: httpd.lol/0.1 (lci):3:)"...
+                    AN "Context-Type: text/html:3:)"...
+                    AN "Content-Length: :{len}:3:):3:)"...
+                    AN ":{data}:3:)" MKAY
+
+	I IZ SOCKS'Z PUT YR sock AND YR conn AN YR reply MKAY
+        I IZ SOCKS'Z CLOSE YR conn MKAY
+    IM OUTTA YR loop
+KTHXBYE
+
+
+
+}^.^
