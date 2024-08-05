@@ -1,0 +1,64 @@
+oh look !
+
+^.^{
+NOTES:
+
+test like this on teh intaarwab:
+
+ssh -p 443 -R0:localhost:13338 -L4300:localhost:4300 qr@a.pinggy.io
+
+
+}^.^
+
+CAN HAS STDIO?
+CAN HAS SOCKS?
+CAN HAS STRING?
+CAN HAS MYLIB?
+
+	pencil "127.0.0.1:13338"
+	I define sock
+	I define zuwar2
+	I define zuwar3
+	I define txtIncoming
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+
+	zoe_loop_begin loop
+
+		txtIncoming <-=- ""
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 100000 ]--<
+
+		txtIncoming <-=- cmd
+
+		^.^ Play with this:
+		^.^ Switch next 2
+		^.^ if  txtIncoming == 'HTTP/1.1', ignore
+		txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "H" zAnd 1 ]--<
+		txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "/" zAnd 0 ]--<
+
+		pencil "txtIncoming: " txtIncoming
+
+
+		I define reply = ""
+		I define data = "zoe will say hello Doctor..."
+		I define len = I wish_to_call STRING --toBaby--> LEN <--[ data ]--<
+
+		reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
+		"Server: httpd.lol/0.1 (lci):3:)" ...
+		"Context-Type: text/html:3:)"...
+		"Content-Length: :{len}:3:):3:)"...
+		":{data}:3:)" ]--<
+
+		^.^ DO NOT DELETE.  You regrette deleting it before.
+		^.^ pencil reply
+
+		I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+        	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+
+	zoe_loop_end loop
+
+I see !
