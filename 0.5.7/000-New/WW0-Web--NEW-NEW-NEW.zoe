@@ -4,7 +4,62 @@ oh look !
     CAN HAS SOCKS?
     CAN HAS STRING?
 
-I see !
+^.^	127.0.0.1:13338
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+
+	zoe_loop_begin loop
+
+		I define conn
+		conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+		I define cmd
+		cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1024 ]--<
+
+^.^		I HAS A reply ITZ ""
+^.^		I HAS A data ITZ "zoe will say hello Doctor..."
+
+^.^		Make 1 like 2 !!
+^.^		I HAS A len ITZ I IZ STRING'Z LEN YR data MKAY
+^.^ 		I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13337 ]--<
+		
+
+
+		I define reply = ""
+		I define data = "zoe will say hello Doctor..."
+		I define len = I wish_to_call STRING --toBaby--> LEN <--[ data ]--<
+^.^{
+            reply R SMOOSH "HTTP/1.1 200 OK:3:)"...
+                    AN "Server: httpd.lol/0.1 (lci):3:)"...
+                    AN "Context-Type: text/html:3:)"...
+                    AN "Content-Length: :{len}:3:):3:)"...
+                    AN ":{data}:3:)" MKAY
+}^.^
+
+reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
+"Server: httpd.lol/0.1 (lci):3:)" ...
+"Context-Type: text/html:3:)"...
+"Content-Length: :{len}:3:):3:)"...
+":{data}:3:)" ]--<
+
+pencil reply
+
+		I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+        	I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+
+^.^{
+
+	End of Now
+	
+
+}^.^
+	zoe_loop_end loop
+
+
+
+^.^ sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13337 ]--<
+
 
 
 ^.^{
@@ -37,9 +92,28 @@ HAI 1.4
 
 	I IZ SOCKS'Z PUT YR sock AND YR conn AN YR reply MKAY
         I IZ SOCKS'Z CLOSE YR conn MKAY
+
+
+
+
     IM OUTTA YR loop
 KTHXBYE
 
 
 
 }^.^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I see !
