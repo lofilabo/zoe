@@ -3,10 +3,15 @@ oh look !
 ^.^{
 NOTES:
 
-test like this on teh intarweb:
+test like this on 'actual' internet.
+Spot problems which do not happen on local machine (such 
+as ":{len} problem" ;)
 
 ssh -p 443 -R0:localhost:13338 -L4300:localhost:4300 qr@a.pinggy.io
+or
+ngrok http 13338
 
+and do not forget to luk on teh intarweb.
 
 }^.^
 
