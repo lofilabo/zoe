@@ -1,0 +1,151 @@
+oh look !
+
+^.^{
+NOTES:
+
+test like this on teh intarweb:
+
+ssh -p 443 -R0:localhost:13338 -L4300:localhost:4300 qr@a.pinggy.io
+
+
+}^.^
+
+CAN HAS STDIO?
+CAN HAS SOCKS?
+CAN HAS STRING?
+CAN HAS MYLIB?
+
+	function I myFunctionTwo <--[ arriving_value zAnd second_value zAnd third_value
+
+		pencil "127.0.0.1:13338"
+		I define sock
+		I define txtIncoming
+
+		sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+
+		zoe_loop_begin loop
+
+			txtIncoming <-=- ""
+
+			I define conn
+			conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+			I define cmd
+			cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 131072 ]--<
+
+			txtIncoming <-=- cmd
+
+			^.^ Play with this:
+			^.^ Switch next 2
+			^.^ if  txtIncoming == 'HTTP/1.1', ignore
+
+			^.^ FAILURE? RESTORE THESE.
+			^.^ txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "H" zAnd 1 ]--<
+			^.^ txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "/" zAnd 0 ]--<
+
+			^.^ THIS SEEMS TO BE BEHAVING AT THE MOMENT.....
+			^.^ THESE ARE OK!!!! PUT THEM BACK if NEW ONES CAUSE PROBLEMS.
+			^.^ if dodgy things happen, re-use with next 2:
+			
+			^.^  SEEING PROBLEMS? CHECK HERE.
+
+			^.^  TEST and TEST MANY TIMES BETWEEN
+			^.^  CHOICE 1 and CHOICE 2
+
+			^.^	CHOICE 1
+			 	txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "H" zAnd 1 ]--<
+			 	txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "/" zAnd 0 ]--<
+			^.^     UNCOMMENT THESE 2 ...^...^...^...^...^...^...^...^...^...^...^...^...^...^...^...^...^...^...^...^...^
+
+			^.^	CHOICE 2
+			^.^	txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "/" zAnd 0 ]--<
+			^.^	txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd " " zAnd 1 ]--<
+			^.^ ....AND COMMENT THESE 2 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+			^.^ 	zoe_same txtIncoming {.} "HTTP/1.1*"
+			^.^ 	zoe_match?
+			^.^ 		zoe_pass
+			^.^ 			pencil "FOUND HTTP/1.1"
+			^.^ 			txtIncoming <-=- "REPLACED"
+			^.^ 	zoe_oh_I_see
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			^.^{
+			FUTURE::Work with this:
+				1. " " replaces "H"
+				2. Order is swapped!
+				3. This 'allows in' 'HTTP/1.1' when there is nothing after the /
+				txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "/" zAnd 0 ]--<
+				txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd " " zAnd 1 ]--<
+			}^.^
+
+
+			pencil "txtIncoming: >>" txtIncoming "<<"
+
+			I define TEMPtext = "Slot-in"
+			I define contents = ""
+
+			CAN HAS STDIO?
+			^.^ HTML tested with this: html70.htm , html71.htm
+			I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html70.htm" zAnd "r" ]--<
+			I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
+			contents <-=- I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 8192 ]--<
+
+				^.^{
+				Let's play at making text for the front-end here.
+				the 3 vars made here are NEXT USED in the .htm file
+				}^.^			
+				I define side1a = ""
+				I define side2a = ""
+				I define side3a = ""
+				side1a <-=- "step 1"
+				side2a <-=- "step 2 :{side1a}"
+				side3a <-=- "step 3 :{side2a}"
+
+				^.^{
+					But.....how do these get on to the page...?
+					The :{side1a} etc. shortcuts are WITHIN the .htm file !!
+				}^.^
+
+			I define reply = ""
+			I define data = "zoe will say hello Doctor..."
+			data <-=- contents
+
+			I define len = I wish_to_call STRING --toBaby--> LEN <--[ data ]--<
+
+			reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
+			"Server: httpd.zoe/0.5.9 (lci):3:)" ...
+			"Context-Type: text/html:3:)"...
+			"Content-Length: :{len}:3:):3:)"...
+			":{data}:3:)" ]--<
+
+			^.^ DO NOT DELETE.  You regrette deleting it before.
+			^.^ pencil reply
+
+			I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+			I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+
+		zoe_loop_end loop
+
+	zReturn "I Came Back"
+	end_of_function
+
+
+
+	retVal <-=- I wish_to_call myFunctionTwo <--[ 44.4 zAnd 333 zAnd "Jamie!" ]--<
+
+I see !

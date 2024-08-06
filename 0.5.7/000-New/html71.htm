@@ -1,0 +1,102 @@
+<html>
+<head>
+
+   <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
+   <title>Page Title</title>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+      body {
+	 font-family: 'Jura';font-size: 22px
+         <!-- font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  -->
+         margin: 0;
+      }
+      .header {
+         padding: 24px;
+         text-align: center;
+         background: #154E06;
+         color: white;
+      }
+      .header h1 {
+         font-size: 40px;
+      }
+      nav {
+         width: 100%;
+         background-color: rgb(39, 39, 39);
+         overflow: auto;
+         height: auto;
+      }
+      .links {
+         display: inline-block;
+         text-align: center;
+         padding: 14px;
+         color: #999999;
+         text-decoration: none;
+         font-size: 17px;
+      }
+      .links:hover {
+         background-color: rgb(100, 100, 100);
+      }
+      .selected {
+         background-color: rgb(0, 18, 43);
+      }
+      main {
+         background-color: white;
+         padding: 20px;
+      }
+      .footer {
+         padding: 20px;
+         text-align: center;
+         color: white;
+         background: #154E06;
+      }
+      @media screen and (max-width: 830px) {
+         div, main {
+            width: 100%;
+            text-align: left;
+         }
+         .links {
+            display: block;
+         }
+      }
+   </style>
+</head>
+
+
+<body>
+   <div class="header">
+      <h1>Zoe Web Interface</h1>
+   </div>
+   <nav>
+      <a class="links selected" href="#"> Home</a>
+      <a class="links" href="#"> OPTION ONE</a>
+      <a class="links" href="#"> OPTION TWO</a>
+      <a class="links" href="#"> OPTION THREE</a>
+      <a class="links" href="#"> OPTION FOUR</a>
+   </nav>
+   <main>
+
+      <h2>Test Text</h2>
+      <h5>Example</h5>
+      <p>
+
+		THIS IS THE BODY
+		<br/>
+		:{side1a}
+		<br/>
+		:{side2a}
+		<br/>
+		:{side3a}
+		<br/>
+		<br/>
+		<br/>
+		:{side1a} :{side2a} :{side3a}
+
+      </p>
+   </main>
+   <div class="footer">
+      <h2>Footer</h2>
+   </div>
+</body>
+</html>

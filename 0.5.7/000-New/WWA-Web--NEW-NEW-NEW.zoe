@@ -20,9 +20,8 @@ CAN HAS MYLIB?
 
 		pencil "127.0.0.1:13338"
 		I define sock
-		I define zuwar2
-		I define zuwar3
 		I define txtIncoming
+
 		sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
 
 		zoe_loop_begin loop
@@ -57,7 +56,17 @@ CAN HAS MYLIB?
 
 			I define reply = ""
 			I define data = "zoe will say hello Doctor..."
+
 			I define len = I wish_to_call STRING --toBaby--> LEN <--[ data ]--<
+			^.^{
+				Note for future:
+				len is VERY VERY important.
+				doesn't matter locally, is required for distribution via web.
+				1. It is the 'length' of the HEADER and NOT the TEXT.
+				2. Calculate it as close to use as you can.
+				3. You can see it being counted 7 lines above here
+				   ....and used 6 lines below.
+			}^.^
 
 			reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
 			"Server: httpd.lol/0.1 (lci):3:)" ...
