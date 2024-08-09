@@ -100,6 +100,7 @@ CAN HAS STDIO?
 	I define Follow = 0
 
 	survivingData <-=- "item1;item2;item3;"
+^.^	survivingData <-=- toysoldiers>--[ survivingData ";" ]--<
 
 ^.^ start loop here
 	zoe_loop_begin loopy
