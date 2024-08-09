@@ -105,7 +105,7 @@ CAN HAS MYLIB?
 
 			CAN HAS STDIO?
 			^.^ HTML tested with this: html70.htm , html71.htm
-			I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html70.htm" zAnd "r" ]--<
+			I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "html71.htm" zAnd "r" ]--<
 			I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
 			contents <-=- I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 8192 ]--<
 
@@ -134,7 +134,7 @@ CAN HAS MYLIB?
 			reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
 			"Server: httpd.zoe/0.5.9 (lci):3:)" ...
 			"Context-Type: text/html:3:)"...
-			"Content-Length: :{len}:3:):3:)"...
+			"Content-Length: " {.} I wish_to_call STRING --toBaby--> LEN <--[ data ]--< {.} ":3:):3:)"...
 			":{data}:3:)" ]--<
 
 			^.^ DO NOT DELETE.  You regrette deleting it before.

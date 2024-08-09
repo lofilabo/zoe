@@ -1,0 +1,60 @@
+oh look !
+
+^.^{
+NOTES:
+
+test like this on teh intarweb:
+
+ssh -p 443 -R0:localhost:13338 -L4300:localhost:4300 qr@a.pinggy.io
+
+
+}^.^
+
+^.^ CAN HAS STDIO?
+CAN HAS SOCKS?
+CAN HAS STRING?
+^.^ CAN HAS MYLIB?
+
+	function I myFunctionTwo <--[ arriving_value zAnd second_value zAnd third_value
+
+		I define retVal = ""
+
+		pencil "127.0.0.1:13338"
+		I define sock
+		I define txtIncoming
+
+		I define data = "zoe hello."
+		I define len = ""
+		sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+
+		zoe_loop_begin loop
+
+			I define conn
+			conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+			I define cmd
+			cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1000000 ]--<
+
+			I define reply = ""
+			
+			reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
+				"Server: httpd.lol/0.1 (lci):3:)" ...
+				"Context-Type: text/html:3:)"...
+				"Content-Length: " {.} I wish_to_call STRING --toBaby--> LEN <--[ data ]--< {.} ":3:):3:)"...
+				":{data}:3:)" ]--<
+
+			^.^ DO NOT DELETE.  You regrette deleting it before.
+			^.^ pencil reply
+
+			I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+			I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+		zoe_loop_end loop
+
+	zReturn "I Came Back"
+	end_of_function
+
+
+
+	retVal <-=- I wish_to_call myFunctionTwo <--[ 44.4 zAnd 333 zAnd "Jamie!" ]--<
+
+I see !

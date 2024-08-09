@@ -1,0 +1,105 @@
+oh look !
+
+^.^{
+NOTES:
+
+test like this on teh intarweb:
+
+ssh -p 443 -R0:localhost:13338 -L4300:localhost:4300 qr@a.pinggy.io
+
+
+}^.^
+
+CAN HAS STDIO?
+CAN HAS SOCKS?
+CAN HAS STRING?
+CAN HAS MYLIB?
+
+
+	function I doDatabaseThings  <--[ arriving_value
+
+		pencil "^^^^^^^ we have now entered the DATABASE FUNCTION !!!!!!!!!!!!"
+
+		CAN HAS MYLIB?
+
+		^.^ pencil "^^DB^^    " {.} I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable" ]--<
+		^.^ pencil "^^DB^^    " {.}  I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1" ]--<
+		pencil "^^DB^^    " {.}  I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id=1 or id=2 or id=3" ]--<
+		^.^ pencil "^^DB^^    " {.}  I wish_to_call MYLIB --toBaby--> zoeSQL <--[ "SELECT * from testtable where id<>1 and id<>2" ]--<
+
+		^.^ R E S U L T S :: L O O K    I N    T H E   F I L E !! 
+		^.^ THE RESULTS are NOT retuend to us.
+		^.^ They are put into zdb_output_data.txt
+		^.^ Let's look at them:
+
+		pencil "^^DB^^    We just watched the data being collected WITHIN the database."
+		pencil "^^DB^^    Now, let's see what data has been returned to us (in: zdb_output_data.txt)"
+		CAN HAS STDIO?
+		I define readFile = I wish_to_call STDIO --toBaby--> OPEN <--[ "zdb_output_data.txt" zAnd "r" ]--<
+		I wish_to_call STDIO --toBaby--> DIAF <--[ readFile ]--< 
+		I define contents = I wish_to_call STDIO --toBaby-->  LUK <--[ readFile zAnd 1024 ]--<
+		pencil "^^DB^^    " {.}  contents
+
+	zReturn contents
+	end_of_function
+
+
+	function I myFunctionTwo <--[ arriving_value zAnd second_value zAnd third_value
+
+		I define retVal = ""
+
+		pencil "127.0.0.1:13338"
+		I define sock
+		I define txtIncoming
+
+
+
+		I define data = "zoe hello."
+		I define len = ""
+		sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+
+		zoe_loop_begin loop
+
+			data <-=- I wish_to_call doDatabaseThings <--[ 44.4 ]--<
+			pencil "0-----------DATA------->" {.} data 
+
+			txtIncoming <-=- ""
+
+			I define conn
+			conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+			I define cmd
+			cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1000000 ]--<
+
+			txtIncoming <-=- cmd
+			txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "H" zAnd 1 ]--<
+			txtIncoming <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ txtIncoming zAnd "/" zAnd 0 ]--<
+
+			pencil "txtIncoming: " txtIncoming
+
+			I define reply = ""
+			
+			pencil "Web-side retval" {.} 
+
+			reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
+				"Server: httpd.lol/0.1 (lci):3:)" ...
+				"Context-Type: text/html:3:)"...
+				"Content-Length: " {.} I wish_to_call STRING --toBaby--> LEN <--[ data ]--< {.} ":3:):3:)"...
+				":{data}:3:)" ]--<
+
+			^.^ DO NOT DELETE.  You regrette deleting it before.
+			^.^ pencil reply
+
+			I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+			I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+
+		zoe_loop_end loop
+
+	zReturn "I Came Back"
+	end_of_function
+
+
+
+	retVal <-=- I wish_to_call myFunctionTwo <--[ 44.4 zAnd 333 zAnd "Jamie!" ]--<
+
+I see !
