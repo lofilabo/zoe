@@ -1,0 +1,71 @@
+oh look !
+
+
+^.^{
+Vary, very similar to the Previous version, except, introduces
+the contact of pickig up http://YOUR-URL/your-input<<---this after-/ input.
+
+Calling a function is skipped and laughed at in this section.
+}^.^
+
+	pencil "Point your Browser at this:"
+	pencil "127.0.0.1:13338"
+
+	CAN HAS STDIO?
+	CAN HAS SOCKS?
+	CAN HAS STRING?
+	CAN HAS MYLIB?
+	CAN HAS STDIO?
+
+	I define sock
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
+
+	I define positionList = ""
+	I define zuwar2 = ""
+	I define data = ""
+
+
+	pencil "You are Here now"
+
+	data <-=- "<html><body><h1>Current Call</h1><img src=https://www.1010.or.jp/map/wp-content/uploads/2015/03/naminoyu-top-250x170.jpg><br/> :{positionList}:3:)</body></html>"
+
+
+		zoe_loop_begin loop
+
+			I define conn
+			conn <-=- I wish_to_call SOCKS --toBaby--> LISTN <--[ sock ]--<
+			I define cmd
+			cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1000000 ]--<
+
+			I define reply = ""
+
+			^.^ let's noodle with cmp, the 'information' about where-we-are-now
+			zuwar2 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ cmd zAnd "H" zAnd 1 ]--<
+			positionList <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 <--[ zuwar2 zAnd "/" zAnd 0 ]--<
+			
+			^.^{
+			now-recognised 'draw-the-page' bit.
+			1. 	we must have >>> data <<< (the text for the page)
+				prepared BEFORE this....
+
+			2.	....because we need the length of it!!
+
+			3.	THEREFORE, in this example, we prepare >>> data <<< as
+				almost the first thing.
+			}^.^
+			reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
+				"Server: httpd.lol/0.1 (lci):3:)" ...
+				"Context-Type: text/html:3:)"...
+				"Content-Length: " {.} I wish_to_call STRING --toBaby--> LEN <--[ data ]--< {.} ":3:):3:)"...
+				":{data}:3:)" ]--<
+
+			^.^ DO NOT DELETE.  You regrette deleting it before.
+			^.^ pencil reply
+
+			I wish_to_call SOCKS --toBaby--> PUT <--[ sock zAnd conn zAnd reply ]--<
+			I wish_to_call SOCKS --toBaby--> CLOSE <--[ conn ]--<
+
+		zoe_loop_end loop
+
+pencil "END OF FILE"
+I see !

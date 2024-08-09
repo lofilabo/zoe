@@ -15,6 +15,12 @@ CAN HAS SOCKS?
 CAN HAS STRING?
 ^.^ CAN HAS MYLIB?
 
+
+^.^{
+For a laugh, this has a function in it.
+The use of the function is *no use* except to Prove that
+we can use a function. Zoe would understand.
+}^.^
 	function I myFunctionTwo <--[ arriving_value zAnd second_value zAnd third_value
 
 		I define retVal = ""
@@ -35,7 +41,17 @@ CAN HAS STRING?
 			cmd  <-=- I wish_to_call SOCKS --toBaby-->  GET <--[ sock zAnd conn zAnd 1000000 ]--<
 
 			I define reply = ""
-			
+
+			^.^{
+			now-recognised 'draw-the-page' bit.
+			1. 	we must have >>> data <<< (the text for the page)
+				prepared BEFORE this....
+
+			2.	....because we need the length of it!!
+
+			3.	THEREFORE, in this example, we prepare >>> data <<< as
+				almost the first thing.
+			}^.^			
 			reply <-=- toysoldiers>--[ "HTTP/1.1 200 OK:3:)" ...
 				"Server: httpd.lol/0.1 (lci):3:)" ...
 				"Context-Type: text/html:3:)"...

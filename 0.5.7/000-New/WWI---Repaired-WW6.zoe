@@ -1,7 +1,7 @@
 oh look !
 
 	pencil "Point your Browser at this:"
-	pencil "127.0.0.1:13331"
+	pencil "127.0.0.1:13338"
 
 	CAN HAS STDIO?
 	CAN HAS SOCKS?
@@ -10,7 +10,7 @@ oh look !
 	CAN HAS STDIO?
 
 	I define sock
-	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13331 ]--<
+	sock <-=- I wish_to_call SOCKS --toBaby--> BIND <--[ "127.0.0.1" zAnd 13338 ]--<
 
 	I define zuwar2 = ""
 	I define s = 0
