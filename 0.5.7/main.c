@@ -200,9 +200,9 @@ int main(int argc, char **argv)
 					/* Save state between lines using a ScopeObject structure */
 					ScopeObject *scope = createScopeObject(NULL);
 					if (!scope) return 1;
-					while ((line = readline("lci> "))) {
-						char *pre = "HAI 1.4\n";
-						char *post = "\n\nKTHXBYE\n";
+					while ((line = readline("zoe :) "))) {
+						char *pre = "oh look !\n";
+						char *post = "\n\nI see !\n";
 						char *code = NULL;
 						size = strlen(line);
 						buffer = realloc(buffer, sizeof(char) * (length + size + 1));
@@ -211,7 +211,7 @@ int main(int argc, char **argv)
 						length += size + 1;
 						add_history(line);
 						/* Intercept KTHXBYE to quit */
-						if (!strcmp(line, "KTHXBYE")) {
+						if (!strcmp(line, "I see !")) {
 							break;
 						}
 						/* Intercept HALP to display help message */
