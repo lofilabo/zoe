@@ -9,10 +9,11 @@
       }
       body {
 	 font-family: 'Jura';
-	font-size: 122px
+	
          <!-- font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  -->
          margin: 0;
       }
+
       .header {
          padding: 24px;
          text-align: center;
@@ -52,14 +53,29 @@
          color: white;
          background: #154E06;
       }
-      @media screen and (max-width: 910px) {
-         div, main {
-            width: 100%;
-            text-align: left;
-         }
-         .links {
-            display: block;
-         }
+      @media screen and (max-width: 1100px) {
+
+		div, main {
+			width: 100%;
+			text-align: left;
+		}
+
+		p{
+			font-size: 42px
+		}
+
+      .links {
+         display: inline-block;
+         text-align: center;
+         padding: 8px;
+         color: #00ffff;
+         text-decoration: none;
+         font-size: 50px;
+      }
+
+		.links {
+			display: block;
+		}
       }
    </style>
 </head>
