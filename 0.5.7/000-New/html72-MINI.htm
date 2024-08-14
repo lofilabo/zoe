@@ -34,6 +34,11 @@
 				<br>
 
 
+			<h4>
+			want to show input from here?  Look at:<br/>
+			<u>html72-MINI.htm</u>, and switch lines below the<br/> form
+			</h4>
+
                 <form 
                     action=datainput 
                     method=get
@@ -42,12 +47,17 @@
                     <label for=data1>
                         Data 01 &nbsp; 
                     </label>
-                    <input type=text id=data1 name=data1 value=:{positionList}>
+                    <!-- <input type=text id=data1 name=data1 value=:{positionList}> -->
+		    <input type=text id=data1 name=data1 value=''>
                     <input type=submit value=Submit>
                     </h5>
                 </form>
 
-
+		<h2>
+		RECIEVED:  :{positionList} <br/>
+		FRONT PART :{var_GLOBAL_PUBLIC_1} <br/>
+		AFTER-PART :{retVal} <br/>
+		</h2>
 
 
 			</h3>
