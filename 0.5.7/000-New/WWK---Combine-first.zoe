@@ -31,6 +31,8 @@ oh look !
 			^.^ pencil "INCOMING varINA : " varINA
 			^.^ pencil "INCOMING qMark  : " qMark
 
+			^.^ NOTE!! var_GLOBAL_PUBLIC_1 is the 'beginning' of a var with a ? in it.
+
 			I define var03 = ""
 			I define var04 = ""
 			I define var05 = ""
@@ -97,13 +99,13 @@ oh look !
 
 					^.^ Let's get the FRONT part of the string now.
 					^.^ front-half => zAnd 1
-^.^ pencil "YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  YOU ARE HERE!!!  "  
+
 					var_GLOBAL_PUBLIC_1 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
 						<--[ var06 ...
 						zAnd qMark ...
 						zAnd 1 ...
 					]--<
-^.^ pencil var_GLOBAL_PUBLIC_1
+
 
 					^.^ Cut Off the 'added' ?
 				  	var04 <-=- I wish_to_call MYLIB --toBaby--> zoePassString1 ...
@@ -120,7 +122,9 @@ oh look !
 			^.^ spit the main text back to the function.
 			^.^ 'do something' with the name of the expected process 
 			^.^ i.e. thing-to-do?valueName
-^.^ pencil "LEAVING FUNCTION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+
+			^.^ pencil "LEAVING FUNCTION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+
 		zReturn varOUT
 		end_of_function
 
