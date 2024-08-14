@@ -1,0 +1,140 @@
+<html>
+<head>
+
+   <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
+   <title>Page Title</title>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+      body {
+	 font-family: 'Jura';
+	
+         <!-- font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  -->
+         margin: 0;
+      }
+
+      .header {
+         padding: 24px;
+         text-align: center;
+         background: #154E06;
+         color: white;
+      }
+      .header h1 {
+         font-size: 40px;
+      }
+      nav {
+         width: 100%;
+         background-color: rgb(39, 39, 39);
+         overflow: auto;
+         height: auto;
+      }
+      .links {
+         display: inline-block;
+         text-align: center;
+         padding: 14px;
+         color: #999999;
+         text-decoration: none;
+         font-size: 17px;
+      }
+      .links:hover {
+         background-color: rgb(100, 100, 100);
+      }
+      .selected {
+         background-color: rgb(0, 18, 43);
+      }
+      main {
+         background-color: white;
+         padding: 20px;
+      }
+      .footer {
+         padding: 20px;
+         text-align: center;
+         color: white;
+         background: #154E06;
+      }
+      @media screen and (max-width: 1100px) {
+
+		div, main {
+			width: 100%;
+			text-align: left;
+		}
+
+		p{
+			font-size: 42px
+		}
+
+		.links {
+			 display: inline-block;
+			 text-align: center;
+			 padding: 16px;
+			 color: #dddddd;
+			 text-decoration: none;
+			 font-size: 50px;
+		}
+
+		.links {
+			display: block;
+		}
+      }
+   </style>
+</head>
+
+
+<body>
+   <div class="header">
+      <h1>Zoe Web Interface</h1>
+   </div>
+   <nav>
+      <a class="links selected" href="#"> Home</a>
+      <a class="links" href="#"> OPTION ONE</a>
+      <a class="links" href="#"> OPTION TWO</a>
+      <a class="links" href="#"> OPTION THREE</a>
+      <a class="links" href="#"> OPTION FOUR</a>
+   </nav>
+   <main>
+
+      <h1>Test Text</h1>
+      <h1>Example</h1>
+      <p>
+
+		INSERT INTO HERE
+
+
+			<h2>
+				<a href = /letterUP>Link 1</a>
+				<br>
+				<a href = /letterDOWN>Link 2</a>
+				<br>
+				<a href = /letterMIDDLE>Link 3</a>
+				<br>
+				<a href = /letterOUT>Link 4</a>
+				<br>
+
+
+                <form 
+                    action=datainput 
+                    method=get
+                >
+                    <h5>
+                    <label for=data1>
+                        Data 01 &nbsp; 
+                    </label>
+                    <input type=text id=data1 name=data1 value=:{positionList}>
+                    <input type=submit value=Submit>
+                    </h5>
+                </form>
+
+
+
+
+			</h2>
+
+
+      </p>
+   </main>
+   <div class="footer">
+      <h2>Footer</h2>
+   </div>
+</body>
+</html>
